@@ -10,6 +10,9 @@ do_populate_lic:prepend() {
 
     # unfortunatly license text may differ in whitespaces and empty lines
     checksum_map = {
+        'Apache-2.0': [
+            'c846ebb396f8b174b10ded4771514fcc',
+        ],
         'LGPL-2.0-only': [
             '6d2d9952d88b50a51a5c73dc431d06c7',
             'da48810c4ddf8e49efa031294a26b98c'
@@ -28,7 +31,10 @@ do_populate_lic:prepend() {
             "41890f71f740302b785c27661123bff5",
             "147a320ed8b16b036829a0c71d424153"
         ],
-        'LGPL-3.0-only': [ 'c51d3eef3be114124d11349ca0d7e117' ],
+        'LGPL-3.0-only': [
+	    'c51d3eef3be114124d11349ca0d7e117',
+	    '852ecadc0ac7e6f4d7144d5544a3815b',
+	],
         'LGPL-3.0-or-later': [ 'c51d3eef3be114124d11349ca0d7e117' ],
         'GPL-2.0-only': [
 	    "93e64b4a83c7e441e48bbdeeea05c977",
@@ -48,7 +54,8 @@ do_populate_lic:prepend() {
             '63d6ee386b8aaba70b1bf15a79ca50f2',
             'd0f280d1058e77e66264a9b9e10e6c89',
             '4e290b17e3e05732730de37b44abef90',
-            'b22a8a46d6a5b4683e5ead0113f9be1d'
+            'b22a8a46d6a5b4683e5ead0113f9be1d',
+	    '534956ece1a160a65f088a8f82672ef9'
         ],
         'BSD-3-Clause': [
             '954f4d71a37096249f837652a7f586c0',
