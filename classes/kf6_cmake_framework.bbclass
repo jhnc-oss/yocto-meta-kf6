@@ -70,7 +70,6 @@ FILES:${PN}-dev:append = " \
     ${datadir}/kdevappwizard/templates/*.tar.bz2 \
     ${datadir}/kdevfiletemplates/templates/*.tar.bz2 \
     ${datadir}/qlogging-categories6 \
-    ${libdir}/cmake \
     ${libdir}/plugins/designer/*.so \
     ${prefix}/mkspecs/modules/qt_*.pri \
 "
