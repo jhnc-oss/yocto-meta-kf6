@@ -28,12 +28,12 @@ DEPENDS = " \
 "
 
 require kio_metainfo.inc
-inherit kf6-cmake-framework
-inherit kf6-kcoreaddons
-inherit kf6-kconfig
-inherit kf6-ki18n
-inherit kf6-kdoctools
-inherit kf6-kauth
+inherit kf6_cmake_framework
+inherit kf6_kcoreaddons
+inherit kf6_kconfig
+inherit kf6_ki18n
+inherit kf6_kdoctools
+inherit kf6_kauth
 inherit mime-xdg
 inherit reuse_license_checksums
 

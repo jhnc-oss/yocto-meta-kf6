@@ -16,7 +16,7 @@ DEPENDS = " \
 "
 
 require kwindowsystem_metainfo.inc
-inherit kf6-cmake-framework
+inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
 FILES:${PN} += " \

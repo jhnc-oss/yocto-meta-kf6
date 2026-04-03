@@ -11,7 +11,7 @@ DEPENDS = " \
 "
 
 require ktexttemplate_metainfo.inc
-inherit kf6-cmake-framework
+inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
 INSANE_SKIP:${PN} = "dev-so"

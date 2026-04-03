@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-inherit kf6-cmake
+inherit kf6_cmake
 inherit pkgconfig
 inherit mime-xdg
 

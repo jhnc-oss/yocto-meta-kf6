@@ -25,8 +25,8 @@ RDEPENDS:${PN} += " \
 "
 
 require kded_metainfo.inc
-inherit kf6-cmake-framework
-inherit kf6-kdoctools
+inherit kf6_cmake_framework
+inherit kf6_kdoctools
 inherit reuse_license_checksums
 
 FILES_SOLIBSDEV = ""

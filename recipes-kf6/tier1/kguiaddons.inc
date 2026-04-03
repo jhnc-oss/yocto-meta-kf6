@@ -20,7 +20,7 @@ DEPENDS = " \
 "
 
 require kguiaddons_metainfo.inc
-inherit kf6-cmake-framework
+inherit kf6_cmake_framework
 inherit mime-xdg
 inherit reuse_license_checksums
 

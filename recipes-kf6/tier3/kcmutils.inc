@@ -28,8 +28,8 @@ DEPENDS:class-native = " \
 "
 
 require kcmutils_metainfo.inc
-inherit kf6-cmake-framework
-inherit kf6-ki18n
+inherit kf6_cmake_framework
+inherit kf6_ki18n
 inherit reuse_license_checksums
 
 EXTRA_OECMAKE:class-native = " -DTOOLS_ONLY=ON "

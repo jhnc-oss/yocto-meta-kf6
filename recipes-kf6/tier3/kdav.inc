@@ -15,8 +15,8 @@ DEPENDS = " \
 "
 
 require kdav_metainfo.inc
-inherit kf6-cmake-framework
-inherit kf6-kdoctools
-inherit kf6-kconfig
-inherit kf6-kauth
+inherit kf6_cmake_framework
+inherit kf6_kdoctools
+inherit kf6_kconfig
+inherit kf6_kauth
 inherit reuse_license_checksums
