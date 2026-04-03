@@ -51,8 +51,6 @@ do_install:prepend() {
     fi
 }
 
-BBCLASSEXTEND = "native nativesdk"
-
 FILES:${PN}:append = " \
     ${datadir}/dbus-1/services/*.service \
     ${datadir}/dbus-1/system-services/*.service \
@@ -77,3 +75,5 @@ FILES:${PN}-dev:append = " \
     ${libdir}/plugins/designer/*.so \
     ${prefix}/mkspecs/modules/qt_*.pri \
 "
+
+BBCLASSEXTEND = "native nativesdk"
