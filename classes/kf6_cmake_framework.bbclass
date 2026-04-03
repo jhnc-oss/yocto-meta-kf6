@@ -59,7 +59,6 @@ FILES:${PN}:append = " \
     ${datadir}/kservices6/*.desktop \
     ${datadir}/kservices6/*.protocol \
     ${datadir}/kservicetypes6/*.desktop \
-    ${datadir}/kservices6/*.desktop \
     ${datadir}/polkit-1/actions/*.policy \
     ${datadir}/mime/packages/kde6.xml \
     ${libdir}/qml/org/kde/* \
