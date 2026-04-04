@@ -3,14 +3,13 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KGlobalAccel"
+DESCRIPTION = "Global desktop keyboard shortcuts"
+HOMEPAGE = "https://invent.kde.org/frameworks/kglobalaccel"
 LICENSE = "LGPL-2.0-or-later"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-"
+DEPENDS += "qtbase"
 
-require kglobalaccel_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
-
