@@ -3,12 +3,19 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "Extra CMake Modules"
+DESCRIPTION = "Extra modules and scripts for CMake"
+HOMEPAGE = "https://invent.kde.org/frameworks/extra-cmake-modules"
+
 LICENSE = "BSD-2-Clause & BSD-3-Clause & MIT"
 PR = "r0"
 
-DEPENDS = "cmake-native qttools qtbase-native qttools-native"
+DEPENDS += "cmake-native \
+            qtbase-native \
+            qttools \
+            qttools-native \
+"
 
-require extra-cmake-modules_metainfo.inc
 inherit qt6-cmake
 inherit reuse_license_checksums
 
@@ -19,8 +26,8 @@ EXTRA_OECMAKE:append = " \
 "
 
 INSANE_SKIP:${PN}-dev = "file-rdeps"
-RDEPENDS:${PN}-dev = ""
 
-FILES:${PN}-dev += " ${datadir}/ECM"
+FILES:${PN}-dev += "${datadir}/ECM"
+RDEPENDS:${PN}-dev = ""
 
 BBCLASSEXTEND = "native nativesdk"
