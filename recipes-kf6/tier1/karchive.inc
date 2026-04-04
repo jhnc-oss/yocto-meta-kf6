@@ -7,12 +7,16 @@
 # SPDX-License-Identifier: MIT
 
 # whitelist licenses are all compatible with LGPL-2.0+ and do not add additional restrictions
+
+SUMMARY = "KArchive"
+DESCRIPTION = "Qt addon providing access to numerous types of archives"
+HOMEPAGE = "https://invent.kde.org/frameworks/karchive"
+
 REUSE_LICENSECHECK_WHITELIST = "LGPL-2.0 LGPL-3.0 LicenseRef-KDE-Accepted-LGPL"
 LICENSE = "BSD-2-Clause & LGPL-2.0-or-later"
 PR = "r0"
 
-DEPENDS = "zlib bzip2 xz qtbase"
+DEPENDS += "bzip2 qtbase xz zlib"
 
-require karchive_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
