@@ -5,11 +5,13 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KDBusAddons"
+DESCRIPTION = "Convenience classes for D-Bus"
+HOMEPAGE = "https://invent.kde.org/frameworks/kdbusaddons"
 LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
-DEPENDS = "qtbase"
+DEPENDS += "qtbase"
 
-require kdbusaddons_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
