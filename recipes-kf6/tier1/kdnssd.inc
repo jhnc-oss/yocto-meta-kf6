@@ -5,11 +5,13 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KDNSSD Framework"
+DESCRIPTION = "Network service discovery using Zeroconf"
+HOMEPAGE = "https://invent.kde.org/frameworks/kdnssd"
 LICENSE = "LGPL-2.0-or-later & BSD-3-Clause"
 PR = "r0"
 
-DEPENDS = "qtbase avahi"
+DEPENDS += "avahi qtbase"
 
-require kdnssd_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
