@@ -5,27 +5,25 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KCoreAddons"
+DESCRIPTION = "Qt addon library with a collection of non-GUI utilities"
+HOMEPAGE = "https://invent.kde.org/frameworks/kcoreaddons"
 REUSE_LICENSECHECK_WHITELIST = "CC0-1.0"
 LICENSE = "LGPL-2.1-only"
 PR = "r0"
 
-DEPENDS = "qtbase kcoreaddons-native"
+DEPENDS += "kcoreaddons-native qtbase"
 
-require kcoreaddons_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
-inherit mime-xdg
 inherit mime
 
-FILES:${PN} += " \
-    ${datadir}/mime/packages/kde5.xml \
-    ${datadir}/kf6/licenses/* \
-    ${datadir}/kf6/jsonschema/* \
-    ${libdir}/qml/org/kde/coreaddons/* \
+FILES:${PN} += "${datadir}/mime/packages/kde5.xml \
+                ${datadir}/kf6/licenses/* \
+                ${datadir}/kf6/jsonschema/* \
+                ${libdir}/qml/org/kde/coreaddons/* \
 "
 
-FILES:${PN}-dev += " \
-    ${bindir}/desktoptojson \
-"
+FILES:${PN}-dev += "${bindir}/desktoptojson"
 
-EXTRA_OECMAKE += " -DBUILD_PYTHON_BINDINGS=OFF"
+EXTRA_OECMAKE += "-DBUILD_PYTHON_BINDINGS=OFF"
