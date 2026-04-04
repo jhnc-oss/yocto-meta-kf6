@@ -5,27 +5,25 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KGuiAddons"
+DESCRIPTION = "Utilities for graphical user interfaces"
+HOMEPAGE = "https://invent.kde.org/frameworks/kguiaddons"
 LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
 # licenses only contained in autotests
 REUSE_LICENSECHECK_WHITELIST = "GPL-2.0-only GPL-3.0-only LicenseRef-KDE-Accepted-GPL"
 
-DEPENDS = " \
-    qtbase \
-    qtwayland \
-    qtwayland-native \
-    wayland-protocols \
-    plasma-wayland-protocols \
+DEPENDS += "plasma-wayland-protocols \
+            qtbase \
+            qtwayland \
+            qtwayland-native \
+            wayland-protocols \
 "
 
-require kguiaddons_metainfo.inc
 inherit kf6_cmake_framework
-inherit mime-xdg
 inherit reuse_license_checksums
 
-FILES:${PN} += " \
-    ${libdir}/plugins/kf6/kguiaddons/kmodifierkey/ \
-"
+FILES:${PN} += "${libdir}/plugins/kf6/kguiaddons/kmodifierkey/"
 
-EXTRA_OECMAKE += " -DBUILD_PYTHON_BINDINGS=OFF"
+EXTRA_OECMAKE += "-DBUILD_PYTHON_BINDINGS=OFF"
