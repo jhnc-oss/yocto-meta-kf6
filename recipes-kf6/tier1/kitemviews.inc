@@ -5,11 +5,13 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KItemViews"
+DESCRIPTION = "Set of item views extending the Qt model-view framework"
+HOMEPAGE = "https://invent.kde.org/frameworks/kitemviews"
 LICENSE = "LGPL-2.0-or-later"
 PR = "r0"
 
-DEPENDS = "qtbase"
+DEPENDS += "qtbase"
 
-require kitemviews_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
