@@ -5,11 +5,13 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KPlotting"
+DESCRIPTION = "KPlotWidget is a QWidget-derived class that provides a virtual base class for easy data-plotting"
+HOMEPAGE = "https://invent.kde.org/frameworks/kplotting"
 LICENSE = "LGPL-2.0-or-later"
 PR = "r0"
 
-DEPENDS = "qtbase"
+DEPENDS += "qtbase"
 
-require kplotting_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
