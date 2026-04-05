@@ -5,31 +5,32 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "Ki18n"
+DESCRIPTION = "KI18n provides functionality for internationalizing user interface text in applications"
+HOMEPAGE = "https://invent.kde.org/frameworks/ki18n"
 LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL) & BSD-3-Clause"
 PR = "r0"
 
-DEPENDS:class-native = " \
-    qtbase \
-    gettext-native \
+DEPENDS:append:class-native = " \
     extra-cmake-modules-native \
-"
-DEPENDS:class-target = " \
-    qtdeclarative \
     gettext-native \
+    qtbase \
+"
+DEPENDS:append:class-target = " \
     extra-cmake-modules \
+    gettext-native \
+    qtdeclarative \
 "
 
-require ki18n_metainfo.inc
 inherit kf6_cmake_framework
 inherit python3native
 inherit reuse_license_checksums
 
-EXTRA_OECMAKE:class-native = " -DBUILD_WITH_QTSCRIPT=OFF -DLibIntl_SEARCH_PATH=/usr/include"
+EXTRA_OECMAKE:class-native = "-DBUILD_WITH_QTSCRIPT=OFF -DLibIntl_SEARCH_PATH=/usr/include"
 EXTRA_OECMAKE:append = " -DFALLBACK_KI18N_PYTHON_EXECUTABLE=${bindir}/python3-native/python3"
 
-RDEPENDS:${PN}:class-target = " iso-codes"
-
-FILES:${PN} += " \
-    ${libdir}/plugins/kf6/ktranscript.so \
-    ${libdir}/qml/org/kde/i18n/localeData \
+FILES:${PN} += "${libdir}/plugins/kf6/ktranscript.so \
+                ${libdir}/qml/org/kde/i18n/localeData \
 "
+
+RDEPENDS:${PN}:class-target = "iso-codes"
