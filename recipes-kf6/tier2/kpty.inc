@@ -5,17 +5,16 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KPty"
+DESCRIPTION = "Interfacing with pseudo terminal devices"
+HOMEPAGE = "https://invent.kde.org/frameworks/kpty"
 LICENSE = "LGPL-2.0-or-later & BSD-3-Clause"
 PR = "r0"
 
-DEPENDS = " \
-    kcoreaddons \
-    kcoreaddons-native \
-"
+DEPENDS += "kcoreaddons kcoreaddons-native"
 
 EXTRA_OECMAKE += "-DCMAKE_DISABLE_FIND_PACKAGE_UTEMPTER=ON"
 
-require kpty_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
