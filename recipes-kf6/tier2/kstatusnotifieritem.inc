@@ -2,16 +2,15 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KStatusNotifierItem"
+DESCRIPTION = "Implementation of Status Notifier Items"
+HOMEPAGE = "https://invent.kde.org/frameworks/kstatusnotifieritem"
 LICENSE = "CC0-1.0 & LGPL-2.0-or-later"
 PR = "r0"
 
-DEPENDS += " \
-    qtbase \
-    kwindowsystem \
-"
+DEPENDS += "kwindowsystem qtbase"
 
-require kstatusnotifieritem_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
-EXTRA_OECMAKE += " -DBUILD_PYTHON_BINDINGS=OFF"
+EXTRA_OECMAKE += "-DBUILD_PYTHON_BINDINGS=OFF"
