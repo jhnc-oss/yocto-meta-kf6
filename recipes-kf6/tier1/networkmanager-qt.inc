@@ -3,12 +3,14 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "NetworkManagerQt"
+DESCRIPTION = "Qt wrapper for NetworkManager API"
+HOMEPAGE = "https://invent.kde.org/frameworks/networkmanager-qt"
 LICENSE = "BSD-3-Clause & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
-DEPENDS = "qtbase qtdeclarative networkmanager"
+DEPENDS += "networkmanager qtbase qtdeclarative"
 
-require networkmanager-qt_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
