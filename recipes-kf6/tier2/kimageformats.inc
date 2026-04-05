@@ -5,24 +5,22 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KImageFormats"
+DESCRIPTION = "Plugins to allow QImage to support extra file formats"
+HOMEPAGE = "https://invent.kde.org/frameworks/kimageformats"
 LICENSE = "BSD-2-Clause & LGPL-2.0-or-later & LGPL-2.1-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    karchive \
-    libavif \
+DEPENDS += "karchive \
+            libavif \
+            qtbase \
 "
 
-require kimageformats_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
-FILES:${PN}-dbg += " \
-    ${libdir}/plugins/imageformats/.debug/*.so \
-"
+FILES:${PN}-dbg += "${libdir}/plugins/imageformats/.debug/*.so"
 
-FILES:${PN} += " \
-    ${libdir}/plugins/imageformats/*.so \
-    ${datadir}/kservices6/qimageioplugins/*.desktop \
+FILES:${PN} += "${libdir}/plugins/imageformats/*.so \
+                ${datadir}/kservices6/qimageioplugins/*.desktop \
 "
