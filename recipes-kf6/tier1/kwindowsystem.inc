@@ -5,22 +5,22 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KWindowSystem"
+DESCRIPTION = "Access to the windowing system"
+HOMEPAGE = "https://invent.kde.org/frameworks/kwindowsystem/"
 LICENSE = "MIT & BSD-3-Clause & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    qtwayland \
-    qtwayland-native \
-    plasma-wayland-protocols \
+DEPENDS += "plasma-wayland-protocols \
+            qtbase \
+            qtwayland \
+            qtwayland-native \
 "
 
-require kwindowsystem_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
-FILES:${PN} += " \
-    ${libdir}/plugins/kf6/org.kde.kwindowsystem.platforms/* \
-    ${libdir}/plugins/kf6/kwindowsystem/* \
-    ${libdir}/qml/org/kde/kwindowsystem/* \
+FILES:${PN} += "${libdir}/plugins/kf6/org.kde.kwindowsystem.platforms/* \
+                ${libdir}/plugins/kf6/kwindowsystem/* \
+                ${libdir}/qml/org/kde/kwindowsystem/* \
 "
