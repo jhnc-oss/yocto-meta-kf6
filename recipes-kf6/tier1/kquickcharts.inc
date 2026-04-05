@@ -3,22 +3,21 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KQuickCharts"
+DESCRIPTION = "A QtQuick plugin providing high-performance charts"
+HOMEPAGE = "https://invent.kde.org/frameworks/kquickcharts"
 LICENSE = "MIT & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
-DEPENDS = " \
-    qtdeclarative \
-"
+DEPENDS += "qtdeclarative"
 
-require kquickcharts_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
 FILES_SOLIBSDEV = ""
 INSANE_SKIP:${PN} = "dev-so"
 
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/quickcharts \
-    ${libdir}/libQuickChartsControls.so \
-    ${libdir}/libQuickCharts.so \
+FILES:${PN} += "${libdir}/qml/org/kde/quickcharts \
+                ${libdir}/libQuickChartsControls.so \
+                ${libdir}/libQuickCharts.so \
 "
