@@ -5,14 +5,16 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KUnitConversion"
+DESCRIPTION = "Converting physical units"
+HOMEPAGE = "https://invent.kde.org/frameworks/kunitconversion"
 LICENSE = "LGPL-2.0-or-later"
 PR = "r0"
 
-DEPENDS = "qtbase"
+DEPENDS += "qtbase"
 
-EXTRA_OECMAKE += " -DBUILD_PYTHON_BINDINGS=OFF"
+EXTRA_OECMAKE += "-DBUILD_PYTHON_BINDINGS=OFF"
 
-require kunitconversion_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
