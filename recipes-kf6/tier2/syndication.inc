@@ -3,14 +3,13 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "Syndication"
+DESCRIPTION = "An RSS/Atom parser library"
+HOMEPAGE = "https://invent.kde.org/frameworks/syndication"
 LICENSE = "LGPL-2.0-or-later"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    kcodecs \
-"
+DEPENDS += "kcodecs qtbase"
 
-require syndication_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
