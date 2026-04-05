@@ -5,20 +5,22 @@
 # SPDX-License-Identifier: MIT
 
 # the licenses are only options for some files
+
+SUMMARY = "KJobWidgets"
+DESCRIPTION = "Widgets for showing progress of asynchronous jobs"
+HOMEPAGE = "https://invent.kde.org/frameworks/kjobwidgets"
 REUSE_LICENSECHECK_WHITELIST = "LicenseRef-KDE-Accepted-GPL LGPL-3.0"
 LICENSE = "LGPL-2.0-only"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    kcoreaddons \
-    kcoreaddons-native \
-    knotifications \
-    kwidgetsaddons \
+DEPENDS += "kcoreaddons \
+            kcoreaddons-native \
+            knotifications \
+            kwidgetsaddons \
+            qtbase \
 "
 
-require kjobwidgets_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
-EXTRA_OECMAKE += " -DBUILD_PYTHON_BINDINGS=OFF"
+EXTRA_OECMAKE += "-DBUILD_PYTHON_BINDINGS=OFF"
