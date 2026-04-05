@@ -3,25 +3,24 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KNotifications"
+DESCRIPTION = "Desktop notifications"
+HOMEPAGE = "https://invent.kde.org/frameworks/knotifications"
 LICENSE = "LGPL-2.1-only"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    kwindowsystem \
-    kconfig \
-    kconfig-native \
-    kcoreaddons \
-    kcoreaddons-native \
-    libcanberra \
+DEPENDS += "kconfig \
+            kconfig-native \
+            kcoreaddons \
+            kcoreaddons-native \
+            kwindowsystem \
+            libcanberra \
+            qtbase \
 "
 
-require knotifications_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/notification/* \
-"
+FILES:${PN} += "${libdir}/qml/org/kde/notification/*"
 
-EXTRA_OECMAKE += " -DBUILD_PYTHON_BINDINGS=OFF"
+EXTRA_OECMAKE += "-DBUILD_PYTHON_BINDINGS=OFF"
