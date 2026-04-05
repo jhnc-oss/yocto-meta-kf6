@@ -3,20 +3,20 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KContacts"
+DESCRIPTION = "Library for working with contact information"
+HOMEPAGE = "https://invent.kde.org/frameworks/kcontacts"
 LICENSE = "MIT & BSD-3-Clause & LGPL-2.0-or-later & Unicode-DFS-2016"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    kcoreaddons \
-    kcoreaddons-native \
-    kconfig \
-    kconfig-native \
-    ki18n \
-    kcodecs \
+DEPENDS += "kcodecs \
+            kconfig \
+            kconfig-native \
+            kcoreaddons \
+            kcoreaddons-native \
+            qtbase \
 "
 
-require kcontacts_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
