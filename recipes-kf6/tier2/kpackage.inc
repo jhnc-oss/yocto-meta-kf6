@@ -5,27 +5,26 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "Package framework"
+DESCRIPTION = "This framework lets applications to manage user installable packages of non-binary assets"
+HOMEPAGE = "https://invent.kde.org/frameworks/kpackage"
 LICENSE = "LGPL-2.0-or-later & GPL-2.0-or-later"
 LICENSE:${PN}-tools = "GPL-2.0-or-later"
 
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    karchive \
-    kcoreaddons \
-    kpackage-native \
+DEPENDS += "karchive \
+            kcoreaddons \
+            kpackage-native \
+            qtbase \
 "
 
 PACKAGES =+ "${PN}-tools"
 
+FILES:${PN}-tools += "${bindir}/kpackagetool5"
+
 RRECOMMENDS:${BPN} += "${BPN}-tools"
 
-FILES:${PN}-tools += "\
-    ${bindir}/kpackagetool5 \
-"
-
-require kpackage_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
