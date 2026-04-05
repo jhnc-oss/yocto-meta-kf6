@@ -6,21 +6,19 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "Solid"
+DESCRIPTION = "Desktop hardware abstraction"
+HOMEPAGE = "https://invent.kde.org/frameworks/solid"
 LICENSE = "BSD-3-Clause & LGPL-2.1-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
-DEPENDS = "qtbase bison-native"
+DEPENDS += "bison-native qtbase"
 
-require solid_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/solid/qmldir \
-    ${libdir}/qml/org/kde/solid/*.so \
+FILES:${PN} += "${libdir}/qml/org/kde/solid/qmldir \
+                ${libdir}/qml/org/kde/solid/*.so \
 "
 
-RRECOMMENDS:${PN}:append = " \
-    udisks2 \
-    upower \
-"
+RRECOMMENDS:${PN}:append = " udisks2 upower"
