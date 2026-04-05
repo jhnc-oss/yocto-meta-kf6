@@ -3,24 +3,24 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "Sonnet"
+DESCRIPTION = "Spelling framework for Qt"
+HOMEPAGE = "https://invent.kde.org/frameworks/sonnet"
 LICENSE = "BSD-3-Clause & LGPL-2.0-or-later & LGPL-2.1-or-later"
 PR = "r0"
 
-DEPENDS += " \
-    hunspell \
-    qtbase \
-    qtdeclarative \
-    sonnet-native \
+DEPENDS += "hunspell \
+            qtbase \
+            qtdeclarative \
+            sonnet-native \
 "
 
-require sonnet_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
 EXTRA_OECMAKE:append:class-native = " -DSONNET_USE_WIDGETS=OFF -DSONNET_USE_QML=OFF -DSONNET_NO_BACKENDS=ON"
 EXTRA_OECMAKE:append:class-target = " -DPARSETRIGRAMS_EXECUTABLE=${STAGING_DIR_NATIVE}/${bindir}/parsetrigrams6"
 
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/sonnet/ \
-    ${libdir}/plugins/kf6/sonnet/ \
+FILES:${PN} += "${libdir}/qml/org/kde/sonnet/ \
+                ${libdir}/plugins/kf6/sonnet/ \
 "
