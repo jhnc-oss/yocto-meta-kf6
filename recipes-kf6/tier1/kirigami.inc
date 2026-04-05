@@ -3,23 +3,19 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "Kirigami"
+DESCRIPTION = "A QtQuick based components set"
+HOMEPAGE = "https://invent.kde.org/frameworks/kirigami"
 LICENSE = "LGPL-2.0-or-later"
 PR = "r0"
 
-DEPENDS = " \
-    qtdeclarative \
-    qtsvg \
-"
+DEPENDS += "qtdeclarative qtsvg"
 
-require kirigami_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/kirigami/* \
-    ${libdir}/qml/org/kde/kirigami.2/* \
+FILES:${PN} += "${libdir}/qml/org/kde/kirigami/* \
+                ${libdir}/qml/org/kde/kirigami.2/* \
 "
 
-RDEPENDS:${PN} += " \
-    qtdeclarative-qmlplugins \
-"
+RDEPENDS:${PN} += "qtdeclarative-qmlplugins"
