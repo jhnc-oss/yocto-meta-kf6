@@ -5,22 +5,23 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KFileMetaData"
+DESCRIPTION = "A library for extracting file metadata"
+HOMEPAGE = "https://invent.kde.org/frameworks/kfilemetadata"
 LICENSE = "BSD-3-Clause & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
-DEPENDS += " \
-    qtbase \
-    karchive \
-    kcodecs \
-    kcoreaddons \
-    kcoreaddons-native \
-    libkexiv2 \
-    ffmpeg \
-    poppler \
-    taglib \
+DEPENDS += "ffmpeg \
+            karchive \
+            kcodecs \
+            kcoreaddons \
+            kcoreaddons-native \
+            libkexiv2 \
+            poppler \
+            qtbase \
+            taglib \
 "
 
-require kfilemetadata_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit kf6_kconfig
@@ -29,7 +30,6 @@ inherit reuse_license_checksums
 
 REQUIRED_DISTRO_FEATURES += "xattr"
 
-FILES:${PN} += " \
-    ${libdir}/plugins/kf6/kfilemetadata/*.so \
-    ${libdir}/plugins/kf6/kfilemetadata/writers/*.so \
+FILES:${PN} += "${libdir}/plugins/kf6/kfilemetadata/*.so \
+                ${libdir}/plugins/kf6/kfilemetadata/writers/*.so \
 "
