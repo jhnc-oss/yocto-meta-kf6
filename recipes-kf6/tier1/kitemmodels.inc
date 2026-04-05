@@ -5,16 +5,17 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KItemModels"
+DESCRIPTION = "Set of item models extending the Qt model-view framework"
+HOMEPAGE = "https://invent.kde.org/frameworks/kitemmodels"
 LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only)"
 PR = "r0"
 
-DEPENDS = "qtbase"
+DEPENDS += "qtbase"
 
-require kitemmodels_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/kitemmodels/qmldir \
-    ${libdir}/qml/org/kde/kitemmodels/libitemmodelsplugin.so \
+FILES:${PN} += "${libdir}/qml/org/kde/kitemmodels/qmldir \
+                ${libdir}/qml/org/kde/kitemmodels/libitemmodelsplugin.so \
 "
