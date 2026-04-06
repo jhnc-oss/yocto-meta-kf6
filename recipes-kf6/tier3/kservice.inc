@@ -4,19 +4,21 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KService"
+DESCRIPTION = "KService allows to query information about installed applications and their associated file types"
+HOMEPAGE = "https://invent.kde.org/frameworks/kservice"
 LICENSE = "LGPL-2.1-only"
 PR = "r0"
 
-DEPENDS = "qtbase \
-    kconfig \
-    kconfig-native \
-    kcoreaddons \
-    kcoreaddons-native \
-    kdbusaddons \
-    bison-native \
+DEPENDS += "bison-native \
+            kconfig \
+            kconfig-native \
+            kcoreaddons \
+            kcoreaddons-native \
+            kdbusaddons \
+            qtbase \
 "
 
-require kservice_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
