@@ -3,30 +3,30 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "QQC2 Desktop Style"
+DESCRIPTION = "This is a style for Qt Quick Controls which uses the application's QStyle to paint the controls in order to give them native look and feel"
+HOMEPAGE = "https://invent.kde.org/frameworks/qqc2-desktop-style"
 LICENSE = "LGPL-3.0-only"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    qtdeclarative \
-    kirigami \
-    kiconthemes \
-    kconfigwidgets \
-    kcoreaddons-native \
-    kconfig-native \
-    kauth-native \
-    sonnet \
+DEPENDS += "kauth-native \
+            kconfig-native \
+            kconfigwidgets \
+            kcoreaddons-native \
+            kiconthemes \
+            kirigami \
+            qtbase \
+            qtdeclarative \
+            sonnet \
 "
 
-require qqc2-desktop-style_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
-FILES:${PN} += " \
-    ${libdir}/plugins/kf6/kirigami/*.so \
-    ${libdir}/plugins/kf6/kirigami/platform/*.so \
-    ${libdir}/qml/org/kde/desktop/* \
-    ${libdir}/qml/org/kde/qqc2desktopstyle/private/* \
-    ${libdir}/qml/QtQuick/Controls.2/org.kde.desktop/* \
-    ${libdir}/qml/QtQuick/Controls.2/org.kde.desktop/private/* \
+FILES:${PN} += "${libdir}/plugins/kf6/kirigami/*.so \
+                ${libdir}/plugins/kf6/kirigami/platform/*.so \
+                ${libdir}/qml/org/kde/desktop/* \
+                ${libdir}/qml/org/kde/qqc2desktopstyle/private/* \
+                ${libdir}/qml/QtQuick/Controls.2/org.kde.desktop/* \
+                ${libdir}/qml/QtQuick/Controls.2/org.kde.desktop/private/* \
 "
