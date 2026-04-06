@@ -2,19 +2,19 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KDav"
+DESCRIPTION = "This is an DAV protocol implementation with KJobs"
+HOMEPAGE = "https://invent.kde.org/frameworks/kdav"
 LICENSE = "LGPL-2.0-or-later"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    kio \
-    kcoreaddons \
-    kcoreaddons-native \
-    kdoctools \
-    ki18n \
+DEPENDS += "kcoreaddons \
+            kcoreaddons-native \
+            ki18n \
+            kio \
+            qtbase \
 "
 
-require kdav_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_kdoctools
 inherit kf6_kconfig
