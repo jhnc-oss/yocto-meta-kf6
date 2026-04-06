@@ -4,36 +4,36 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KCMUtils"
+DESCRIPTION = "Utilities for KDE System Settings modules"
+HOMEPAGE = "https://invent.kde.org/frameworks/kcmutils"
 LICENSE = "LGPL-2.0-only"
 PR = "r0"
 
-DEPENDS:class-target = " \
-    qtbase \
-    libxml2-native \
-    kio \
-    kitemviews \
-    kconfigwidgets \
+DEPENDS:append:class-target = " \
     kconfig-native \
+    kconfigwidgets \
     kcoreaddons \
     kcoreaddons-native \
     kiconthemes \
-    kxmlgui \
+    kio \
+    kitemviews \
     kpackage \
     kpackage-native \
+    kxmlgui \
+    libxml2-native \
+    qtbase \
 "
 
-DEPENDS:class-native = " \
-    qtbase-native \
+DEPENDS:append:class-native = " \
     extra-cmake-modules-native \
+    qtbase-native \
 "
 
-require kcmutils_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
 
-EXTRA_OECMAKE:class-native = " -DTOOLS_ONLY=ON "
+EXTRA_OECMAKE:class-native = "-DTOOLS_ONLY=ON "
 
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/kcmutils/ \
-"
+FILES:${PN} += "${libdir}/qml/org/kde/kcmutils/"
