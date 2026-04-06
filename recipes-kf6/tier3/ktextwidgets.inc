@@ -4,24 +4,25 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KTextWidgets"
+DESCRIPTION = "Text editing widgets"
+HOMEPAGE = "https://invent.kde.org/frameworks/ktextwidgets"
 LICENSE = "LGPL-2.1-or-later & (LGPL-2.0-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    qtspeech \
-    kcompletion \
-    kconfig \
-    kconfig-native \
-    kconfigwidgets \
-    kcoreaddons-native \
-    kauth-native \
-    kservice \
-    kwidgetsaddons \
-    sonnet \
+DEPENDS += "kauth-native \
+            kcompletion \
+            kconfig \
+            kconfig-native \
+            kconfigwidgets \
+            kcoreaddons-native \
+            kservice \
+            kwidgetsaddons \
+            qtbase \
+            qtspeech \
+            sonnet \
 "
 
-require ktextwidgets_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
