@@ -4,30 +4,30 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KIconThemes"
+DESCRIPTION = "Icon GUI utilities"
+HOMEPAGE = "https://invent.kde.org/frameworks/kiconthemes"
 LICENSE = "LGPL-2.1-only"
 PR = "r0"
 
-DEPENDS = " \
-    breeze-icons \
-    karchive \
-    kcoreaddons \
-    kcoreaddons-native \
-    kconfigwidgets \
-    kconfig-native \
-    kauth-native \
-    kwidgetsaddons \
-    qtbase \
-    qtbase-native \
-    qtsvg \
+DEPENDS += "breeze-icons \
+            karchive \
+            kauth-native \
+            kconfig-native \
+            kconfigwidgets \
+            kcoreaddons \
+            kcoreaddons-native \
+            kwidgetsaddons \
+            qtbase \
+            qtbase-native \
+            qtsvg \
 "
 
-require kiconthemes_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
 
-FILES:${PN} += "\
-    ${libdir}/plugins/iconengines/ \
-    ${libdir}/plugins/kiconthemes6/iconengines/KIconEnginePlugin.so \
-    ${libdir}/qml/org/kde/iconthemes/* \
+FILES:${PN} += "${libdir}/plugins/iconengines/ \
+                ${libdir}/plugins/kiconthemes6/iconengines/KIconEnginePlugin.so \
+                ${libdir}/qml/org/kde/iconthemes/* \
 "
