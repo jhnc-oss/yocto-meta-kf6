@@ -2,24 +2,23 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KSVG"
+DESCRIPTION = "A library for rendering SVG-based themes with stylesheet re-coloring and on-disk caching"
+HOMEPAGE = "https://invent.kde.org/frameworks/ksvg"
 LICENSE = "BSD-2-Clause & LGPL-2.0-or-later"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    qtdeclarative \
-    karchive \
-    kcoreaddons \
-    kcolorscheme \
-    kguiaddons \
-    kirigami \
+DEPENDS += "karchive \
+            kcolorscheme \
+            kcoreaddons \
+            kguiaddons \
+            kirigami \
+            qtbase \
+            qtdeclarative \
 "
 
-require ksvg_metainfo.inc
 inherit kf6_kconfig
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/ksvg/* \
-"
+FILES:${PN} += "${libdir}/qml/org/kde/ksvg/*"
