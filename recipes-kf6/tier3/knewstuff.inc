@@ -4,43 +4,43 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KNewStuff"
+DESCRIPTION = "Framework for downloading and sharing additional application data"
+HOMEPAGE = "https://invent.kde.org/frameworks/knewstuff"
 REUSE_LICENSECHECK_WHITELIST = "CC0-1.0"
 LICENSE = "LGPL-2.1-only"
 PR = "r0"
 
-DEPENDS = " \
-    libxml2-native \
-    qtbase \
-    qtdeclarative \
-    karchive \
-    kcompletion \
-    kconfig \
-    kconfig-native \
-    kcoreaddons \
-    kcoreaddons-native \
-    kiconthemes \
-    kio \
-    kauth-native \
-    kitemviews \
-    kservice \
-    ktextwidgets \
-    kwidgetsaddons \
-    kxmlgui \
-    attica \
-    kpackage \
-    kpackage-native \
-    kirigami \
-    syndication \
+DEPENDS += "attica \
+            karchive \
+            kauth-native \
+            kcompletion \
+            kconfig \
+            kconfig-native \
+            kcoreaddons \
+            kcoreaddons-native \
+            kiconthemes \
+            kio \
+            kirigami \
+            kitemviews \
+            kpackage \
+            kpackage-native \
+            kservice \
+            ktextwidgets \
+            kwidgetsaddons \
+            kxmlgui \
+            libxml2-native \
+            qtbase \
+            qtdeclarative \
+            syndication \
 "
 
-require knewstuff_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
 
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/newstuff/* \
-    ${libdir}/qml/org/kde/newstuff/qml/* \
-    ${datadir}/kf6/knewstuff/pics/*.png \
-    ${datadir}/kf6/kmoretools/presets-kmoretools/* \
+FILES:${PN} += "${libdir}/qml/org/kde/newstuff/* \
+                ${libdir}/qml/org/kde/newstuff/qml/* \
+                ${datadir}/kf6/knewstuff/pics/*.png \
+                ${datadir}/kf6/kmoretools/presets-kmoretools/* \
 "
