@@ -4,26 +4,27 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KXMLGUI"
+DESCRIPTION = "Framework for managing menu and toolbar actions"
+HOMEPAGE = "https://invent.kde.org/frameworks/kxmlgui"
 LICENSE = "LGPL-2.1-only"
 PR = "r0"
 
-DEPENDS = "qtbase \
-    kcoreaddons \
-    kitemviews \
-    kconfig \
-    kconfig-native \
-    kconfigwidgets \
-    kconfig-native \
-    kauth-native \
-    kiconthemes \
-    kwidgetsaddons \
-    kwindowsystem \
-    kglobalaccel\
+DEPENDS += "kauth-native \
+            kconfig \
+            kconfig-native \
+            kconfigwidgets \
+            kcoreaddons \
+            kglobalaccel \
+            kiconthemes \
+            kitemviews \
+            kwidgetsaddons \
+            kwindowsystem \
+            qtbase \
 "
 
-require kxmlgui_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
 
-EXTRA_OECMAKE += " -DBUILD_PYTHON_BINDINGS=OFF"
+EXTRA_OECMAKE += "-DBUILD_PYTHON_BINDINGS=OFF"
