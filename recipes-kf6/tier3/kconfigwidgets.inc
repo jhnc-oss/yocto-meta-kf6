@@ -4,29 +4,29 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KConfigWidgets"
+DESCRIPTION = "Widgets for configuration dialogs"
+HOMEPAGE = "https://invent.kde.org/frameworks/kconfigwidgets"
 LICENSE = "LGPL-2.1-only"
 PR = "r0"
 
-DEPENDS = "qtbase \
-    kauth \
-    kauth-native \
-    kcoreaddons \
-    kcoreaddons-native \
-    kcodecs \
-    kcolorscheme \
-    kconfig \
-    kconfig-native \
-    kguiaddons \
-    kwidgetsaddons \
+DEPENDS += "kauth \
+            kauth-native \
+            kcodecs \
+            kcolorscheme \
+            kconfig \
+            kconfig-native \
+            kcoreaddons \
+            kcoreaddons-native \
+            kguiaddons \
+            kwidgetsaddons \
+            qtbase \
 "
 
-require kconfigwidgets_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
 
-FILES:${PN}-dev += " \
-    ${bindir}/preparetips5 \
-"
+FILES:${PN}-dev += "${bindir}/preparetips5"
 
 RDEPENDS:${PN}-dev += "perl"
