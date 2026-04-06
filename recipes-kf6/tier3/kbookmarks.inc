@@ -3,23 +3,24 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KBookmarks"
+DESCRIPTION = "Bookmarks management library"
+HOMEPAGE = "https://invent.kde.org/frameworks/kbookmarks"
 LICENSE = "LGPL-2.0-only"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    kconfig \
-    kconfig-native \
-    kcoreaddons \
-    kcoreaddons-native \
-    kcodecs \
-    kconfigwidgets \
-    kauth-native \
-    kiconthemes \
-    kwidgetsaddons \
-    kxmlgui \
+DEPENDS += "kauth-native \
+            kcodecs \
+            kconfig \
+            kconfig-native \
+            kconfigwidgets \
+            kcoreaddons \
+            kcoreaddons-native \
+            kiconthemes \
+            kwidgetsaddons \
+            kxmlgui \
+            qtbase \
 "
 
-require kbookmarks_metainfo.inc
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
