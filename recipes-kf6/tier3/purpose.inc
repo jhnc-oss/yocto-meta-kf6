@@ -3,24 +3,25 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "Purpose Framework"
+DESCRIPTION = "Offers available actions for a specific purpose"
+HOMEPAGE = "https://invent.kde.org/frameworks/purpose"
 LICENSE = "LGPL-2.1-or-later"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    qtdeclarative \
-    kcoreaddons \
-    kcoreaddons-native \
-    ki18n \
-    kconfig \
-    kconfig-native \
-    kio \
-    kauth-native \
-    kirigami \
-    knotifications \
+DEPENDS += "kauth-native \
+            kconfig \
+            kconfig-native \
+            kcoreaddons \
+            kcoreaddons-native \
+            ki18n \
+            kio \
+            kirigami \
+            knotifications \
+            qtbase \
+            qtdeclarative \
 "
 
-require purpose_metainfo.inc
 inherit kf6_cmake_framework
 inherit gettext
 inherit python3native
@@ -30,11 +31,10 @@ inherit reuse_license_checksums
 PACKAGECONFIG ??= ""
 PACKAGECONFIG[kaccounts-integration] = ",,kaccounts-integration intltool-native"
 
-FILES:${PN} += " \
-    ${libdir}/plugins/kf6/kfileitemaction/* \
-    ${libdir}/plugins/kf6/purpose/* \
-    ${libdir}/qml/org/kde/purpose/* \
-    ${datadir}/icons/hicolor/* \
-    ${datadir}/kf6/purpose/* \
-    ${@bb.utils.contains('PACKAGECONFIG', 'kaccounts-integration', '${datadir}/accounts', '', d)} \
+FILES:${PN} += "${libdir}/plugins/kf6/kfileitemaction/* \
+                ${libdir}/plugins/kf6/purpose/* \
+                ${libdir}/qml/org/kde/purpose/* \
+                ${datadir}/icons/hicolor/* \
+                ${datadir}/kf6/purpose/* \
+                ${@bb.utils.contains('PACKAGECONFIG', 'kaccounts-integration', '${datadir}/accounts', '', d)} \
 "
