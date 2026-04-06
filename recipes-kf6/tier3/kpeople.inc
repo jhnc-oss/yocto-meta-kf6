@@ -4,26 +4,26 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KPeople"
+DESCRIPTION = "Provides access to all contacts and aggregates them by person"
+HOMEPAGE = "https://invent.kde.org/frameworks/kpeople"
 LICENSE = "LGPL-2.1-or-later"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    qtdeclarative \
-    kcontacts \
-    kconfig-native \
-    kcoreaddons \
-    kcoreaddons-native \
-    kwidgetsaddons \
-    kitemviews \
+DEPENDS += "kconfig-native \
+            kcontacts \
+            kcoreaddons \
+            kcoreaddons-native \
+            kitemviews \
+            kwidgetsaddons \
+            qtbase \
+            qtdeclarative \
 "
 
-require kpeople_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
 
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/people/* \
-    ${libdir}/plugins/kpeople/datasource/KPeopleVCard.so \
+FILES:${PN} += "${libdir}/qml/org/kde/people/* \
+                ${libdir}/plugins/kpeople/datasource/KPeopleVCard.so \
 "
