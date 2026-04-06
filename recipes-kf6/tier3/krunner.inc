@@ -4,25 +4,24 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KRunner"
+DESCRIPTION = "Framework for Plasma runners"
+HOMEPAGE = "https://invent.kde.org/frameworks/krunner"
 LICENSE = "LGPL-2.0-or-later & LGPL-2.1-only"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    libxml2-native \
-    kconfig \
-    kconfig-native \
-    kcoreaddons \
-    kcoreaddons-native \
-    kitemmodels \
-    kwindowsystem \
+DEPENDS += "kconfig \
+            kconfig-native \
+            kcoreaddons \
+            kcoreaddons-native \
+            kitemmodels \
+            kwindowsystem \
+            libxml2-native \
+            qtbase \
 "
 
-require krunner_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
 
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/krunner/* \
-"
+FILES:${PN} += "${libdir}/qml/org/kde/krunner/*"
