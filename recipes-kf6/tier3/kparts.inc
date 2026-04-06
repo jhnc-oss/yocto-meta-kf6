@@ -4,27 +4,28 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KParts"
+DESCRIPTION = "Plugin framework for user interface components"
+HOMEPAGE = "https://invent.kde.org/frameworks/kparts"
 LICENSE = "LGPL-2.0-or-later & LGPL-2.1-or-later"
 PR = "r0"
 
-DEPENDS = " \
-    libxml2-native \
-    qtbase \
-    kconfig \
-    kconfig-native \
-    kcoreaddons \
-    kcoreaddons-native \
-    kiconthemes \
-    kio \
-    kauth-native \
-    kjobwidgets \
-    kservice \
-    ktextwidgets \
-    kwidgetsaddons \
-    kxmlgui \
+DEPENDS += "kauth-native \
+            kconfig \
+            kconfig-native \
+            kcoreaddons \
+            kcoreaddons-native \
+            kiconthemes \
+            kio \
+            kjobwidgets \
+            kservice \
+            ktextwidgets \
+            kwidgetsaddons \
+            kxmlgui \
+            libxml2-native \
+            qtbase \
 "
 
-require kparts_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
