@@ -4,22 +4,23 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KNotifyConfig"
+DESCRIPTION = "Configuration dialog for desktop notifications"
+HOMEPAGE = "https://invent.kde.org/frameworks/knotifyconfig"
 LICENSE = "LGPL-2.0-only"
 PR = "r0"
 
-DEPENDS = " \
-    libxml2-native \
-    qtbase \
-    phonon \
-    kcompletion \
-    kconfig \
-    kconfig-native \
-    kio \
-    kcoreaddons-native \
-    kauth-native \
+DEPENDS += "kauth-native \
+            kcompletion \
+            kconfig \
+            kconfig-native \
+            kcoreaddons-native \
+            kio \
+            libxml2-native \
+            phonon \
+            qtbase \
 "
 
-require knotifyconfig_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
