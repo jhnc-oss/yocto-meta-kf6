@@ -4,9 +4,7 @@
 SUMMARY = "All meta-kf6 packages"
 DESCRIPTION = "This packagegroup is pimarily meant for release testing."
 BUGTRACKER = "https://invent.kde.org/packaging/yocto-meta-kf6/"
-SECTION = "libs"
 REQUIRED_DISTRO_FEATURES = "wayland x11"
-PV = "5.249.0"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit packagegroup features_check
