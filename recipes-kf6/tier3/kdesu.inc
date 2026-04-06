@@ -4,19 +4,20 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "KDE Su"
+DESCRIPTION = "User interface for running shell commands with root privileges"
+HOMEPAGE = "https://invent.kde.org/frameworks/kdesu"
 LICENSE = "LGPL-2.1-only"
 PR = "r0"
 
-DEPENDS = " \
-    qtbase \
-    kcoreaddons \
-    kcoreaddons-native \
-    kconfig \
-    kconfig-native \
-    kpty \
+DEPENDS += "kconfig \
+            kconfig-native \
+            kcoreaddons \
+            kcoreaddons-native \
+            kpty \
+            qtbase \
 "
 
-require kdesu_metainfo.inc
 inherit kf6_cmake_framework
 inherit kf6_ki18n
 inherit reuse_license_checksums
