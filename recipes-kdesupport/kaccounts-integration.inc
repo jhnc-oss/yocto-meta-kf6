@@ -10,20 +10,17 @@ LICENSE = "GPL-2.0-only & GPL-2.0-or-later & GPL-3.0-only & LGPL-2.0-or-later"
 inherit kf6_cmake_framework kf6_kconfig kf6_kcmutils
 inherit reuse_license_checksums
 
-DEPENDS += " \
-    kcmutils \
-    kcoreaddons \
-    kdbusaddons \
-    ki18n \
-    kio \
-    kwallet \
-    libaccounts-qt \
-    signond \
-    qcoro \
+DEPENDS += "kcoreaddons \
+            kdbusaddons \
+            ki18n \
+            kio \
+            kwallet \
+            libaccounts-qt \
+            qcoro \
+            signond \
 "
 
-FILES:${PN} += " \
-    ${libdir}/plugins/kf6 \
-    ${libdir}/plugins/kaccounts \
-    ${libdir}/plugins/plasma \
+FILES:${PN} += "${libdir}/plugins/kf6 \
+                ${libdir}/plugins/kaccounts \
+                ${libdir}/plugins/plasma \
 "
