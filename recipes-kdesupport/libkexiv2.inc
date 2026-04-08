@@ -3,16 +3,12 @@
 #
 # SPDX-License-Identifier: MIT
 
+SUMMARY = "EXIV2 library interface for KDE"
 DESCRIPTION = "Wrapper around Exiv2 library to manipulate picture metadata as EXIF and XMP"
-SUMMARY = "Wrapper around Exiv2 library to manipulate picture metadata as EXIF and XMP"
 HOMEPAGE = "https://invent.kde.org/graphics/libkexiv2"
 LICENSE = "BSD-3-Clause & GPL-2.0-or-later"
-
 
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
-DEPENDS = " \
-    exiv2 \
-    qtbase \
-"
+DEPENDS += "exiv2 qtbase"
