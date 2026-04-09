@@ -13,11 +13,3 @@ DEPENDS += "qtdeclarative"
 
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
-
-FILES_SOLIBSDEV = ""
-INSANE_SKIP:${PN} = "dev-so"
-
-FILES:${PN} += "${libdir}/qml/org/kde/quickcharts \
-                ${libdir}/libQuickChartsControls.so \
-                ${libdir}/libQuickCharts.so \
-"
