@@ -6,7 +6,7 @@ Subject: [PATCH] Disable doc generation
 SPDX-FileCopyrightText: Marc Ferland <marc.ferland@sonatest.com>
 SPDX-License-Identifier: MIT
 
-Upstream-Status: Inappropriate [OE-Specific]
+Upstream-Status: Inappropriate [oe-specific]
 
 Signed-off-by: Marc Ferland <marc.ferland@sonatest.com>
 ---
