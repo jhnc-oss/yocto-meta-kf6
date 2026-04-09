@@ -4,9 +4,9 @@
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-PACKAGECONFIG:append = " wayland"
-
 SRC_URI += "file://0001-Fix-wayland_scanner-detection-when-cross-compiling.patch"
+
+PACKAGECONFIG:append = " wayland"
 
 EXTRA_OECONF += "ac_cv_path_WAYLAND_SCANNER=${STAGING_BINDIR_NATIVE}/wayland-scanner"
 

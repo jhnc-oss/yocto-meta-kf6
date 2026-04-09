@@ -17,7 +17,7 @@ from the recipe with the actual path to the scanner binary.
 SPDX-FileCopyrightText: Marc Ferland <marc.ferland@sonatest.com>
 SPDX-License-Identifier: MIT
 
-Upstream-Status: Inappropriate [OE-specific]
+Upstream-Status: Inappropriate [oe-specific]
 
 Signed-off-by: Marc Ferland <marc.ferland@sonatest.com>
 ---
