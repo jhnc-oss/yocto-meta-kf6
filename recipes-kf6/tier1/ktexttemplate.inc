@@ -13,6 +13,4 @@ DEPENDS += "qtbase qtdeclarative"
 inherit kf6_cmake_framework
 inherit reuse_license_checksums
 
-INSANE_SKIP:${PN} = "dev-so"
-FILES_SOLIBSDEV = "${libdir}/libKF6TextTemplate.so"
 FILES:${PN} += "${libdir}/plugins/kf6/ktexttemplate/*.so"
