@@ -2,18 +2,19 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "Plasma Wayland Protocols"
+SUMMARY = "Plasma Wayland Protocols"
+DESCRIPTION = "This project provides the xml files of the non-standard wayland protocols we use in Plasma"
+HOMEPAGE = "https://invent.kde.org/libraries/plasma-wayland-protocols"
 LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1"
 PR = "r0"
 
-DEPENDS = "extra-cmake-modules qtwayland-native"
-
-BBCLASSEXTEND = "native nativesdk"
+DEPENDS += "extra-cmake-modules qtwayland-native"
 
 inherit qt6-cmake
 
-FILES:${PN}-dev += " \
-    ${libdir}/cmake/* \
-    ${datadir}/plasma-wayland-protocols/* \
+FILES:${PN}-dev += "${libdir}/cmake/* \
+                    ${datadir}/plasma-wayland-protocols/* \
 "
+
+BBCLASSEXTEND = "native nativesdk"
