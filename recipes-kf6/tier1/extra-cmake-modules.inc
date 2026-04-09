@@ -25,6 +25,7 @@ EXTRA_OECMAKE:append = " \
     -DBUILD_TESTING=OFF \
 "
 
+# nooelint: oelint.vars.insaneskip - some git commit hooks require python, we do not need this
 INSANE_SKIP:${PN}-dev = "file-rdeps"
 
 FILES:${PN}-dev += "${datadir}/ECM"
