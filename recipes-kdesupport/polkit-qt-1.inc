@@ -2,18 +2,18 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "Polkit-Qt-1"
+SUMMARY = "Polkit-Qt-1"
+DESCRIPTION = "Polkit-qt is a library that lets developers use the PolicyKit API through a nice Qt-styled API"
+HOMEPAGE = "https://invent.kde.org/libraries/polkit-qt-1"
 LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.0-or-later.txt;md5=da48810c4ddf8e49efa031294a26b98c"
 PR = "r0"
 
-DEPENDS = "qtbase polkit"
+DEPENDS += "polkit qtbase"
 
 SRC_URI = "git://invent.kde.org/libraries/polkit-qt-1.git;nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/git"
 
 inherit kf6_cmake_framework
 
-FILES:${PN}-dev += " \
-    ${libdir}/cmake/PolkitQt5-1/* \
-"
+FILES:${PN}-dev += "${libdir}/cmake/PolkitQt5-1/*"
