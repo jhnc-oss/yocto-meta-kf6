@@ -2,15 +2,13 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "QCA"
+SUMMARY = "QCA"
+DESCRIPTION = "Qt Cryptographic Architecture"
 HOMEPAGE = "https://invent.kde.org/libraries/qca/"
 LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=fbc093901857fcd118f065f900982c24"
 
-DEPENDS = " \
-    qtbase \
-    qt5compat \
-"
+DEPENDS += "qt5compat qtbase"
 
 PACKAGECONFIG = "botan cyrus-sasl libgcrypt nss"
 PACKAGECONFIG[botan] = ",,botan"
@@ -18,23 +16,16 @@ PACKAGECONFIG[cyrus-sasl] = ",,cyrus-sasl"
 PACKAGECONFIG[libgcrypt] = ",,libgcrypt"
 PACKAGECONFIG[nss] = ",,nss"
 
-SRC_URI = "git://invent.kde.org/libraries/${BPN};nobranch=1;protocol=https"
-
 inherit kf6_cmake_framework
-inherit pkgconfig
 
-EXTRA_OECMAKE += " \
-    -DQT_MAJOR_VERSION=6 \
-    -DBUILD_WITH_QT6=ON \
-    -DQCA_FEATURE_INSTALL_DIR=${libdir}${QT_DIR_NAME}/mkspecs/features \
-    -DLIB_SUFFIX=${@d.getVar('baselib').replace('lib', '')} \
+EXTRA_OECMAKE += "-DQT_MAJOR_VERSION=6 \
+                  -DBUILD_WITH_QT6=ON \
+                  -DQCA_FEATURE_INSTALL_DIR=${libdir}${QT_DIR_NAME}/mkspecs/features \
+                  -DLIB_SUFFIX=${@d.getVar('baselib').replace('lib', '')} \
 "
 
-FILES:${PN} += " \
-    ${libdir}/qca-qt6/crypto/libqca-*.so \
-"
+FILES:${PN} += "${libdir}/qca-qt6/crypto/libqca-*.so"
 
-FILES:${PN}-dev += " \
-    ${libdir}/mkspecs/features/*  \
-    ${libdir}/cmake/qca-qt6/*.cmake \
+FILES:${PN}-dev += "${libdir}/mkspecs/features/*  \
+                    ${libdir}/cmake/qca-qt6/*.cmake \
 "
