@@ -26,7 +26,7 @@ inherit kf6_cmake_framework
 inherit python3native
 inherit reuse_license_checksums
 
-EXTRA_OECMAKE:class-native = "-DBUILD_WITH_QTSCRIPT=OFF -DLibIntl_SEARCH_PATH=/usr/include"
+EXTRA_OECMAKE:class-native = "-DBUILD_WITH_QTSCRIPT=OFF -DLibIntl_SEARCH_PATH=${includedir}"
 EXTRA_OECMAKE:append = " -DFALLBACK_KI18N_PYTHON_EXECUTABLE=${bindir}/python3-native/python3"
 
 FILES:${PN} += "${libdir}/plugins/kf6/ktranscript.so \
