@@ -37,8 +37,6 @@ inherit kf6_kdoctools
 inherit kf6_kauth
 inherit reuse_license_checksums
 
-# handling symlink: /usr/lib/plugins/plasma/kcms/systemsettings_qwidgets/kcm_webshortcuts.so
-INSANE_SKIP:${PN} = "dev-so"
 FILES_SOLIBSDEV = ""
 FILES:${PN} += "${datadir}/kconf_update \
                 ${datadir}/kf6/kcookiejar/domain_info \
