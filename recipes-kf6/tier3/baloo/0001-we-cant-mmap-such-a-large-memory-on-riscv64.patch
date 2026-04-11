@@ -6,6 +6,8 @@ Subject: [PATCH] we cant mmap such a large memory on riscv64
 SPDX-FileCopyrightText: Justin Hammond <justin@dynam.ac>
 SPDX-License-Identifier: LGPL-2.1-or-later
 
+Upstream-Status: Inappropriate [embedded specific]
+
 ---
  src/engine/database.cpp | 6 +++---
  1 file changed, 3 insertions(+), 3 deletions(-)
