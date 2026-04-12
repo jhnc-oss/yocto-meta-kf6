@@ -43,6 +43,4 @@ FILES:${PN} += "${libdir}/plugins/kf6/kio/*.so \
                 ${datadir}/icons/hicolor/128x128/apps/baloo.png \
 "
 
-PRIVATE_LIBS += "liblmdb.so.*"
-
 RDEPENDS:${PN} += "lmdb"
