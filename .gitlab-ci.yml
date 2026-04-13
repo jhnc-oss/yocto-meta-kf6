@@ -7,6 +7,20 @@ include:
       - /gitlab-templates/blocks/workflow.yml
       - /gitlab-templates/reuse-lint.yml
 
+lint:oelint:
+  tags:
+    - Linux
+  stage: validate
+  image: python:3.11-slim
+  before_script:
+    - pip install --upgrade pip
+    - pip install oelint-adv
+  script:
+    - ./scripts/run_oelintadv.sh
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH
+
 .yocto_base:
   stage: build
   image: storage.kde.org/vm-images/yocto-builder-noble
