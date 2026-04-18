@@ -49,6 +49,8 @@ yocto_scarthgap:
     - if: $CI_COMMIT_BRANCH != "master"
   script:
     - MACHINE=visionfive2 . ./setup-environment
+# workaround for scarthgap CI, because meta-kde does not support scarthgap but only one bblayers file is shared
+    - sed -i 's|${BSPDIR}/sources/meta-kde | |g' conf/bblayers.conf
     - echo 'SSTATE_MIRRORS += "file://.* file:///mnt/yocto_sstate_scarthgap/PATH"' >> conf/site.conf
     - echo 'SSTATE_MIRRORS += "file://.* https://storage.kde.org/yocto-sstate/scarthgap/PATH;downloadfilename=PATH"' >> conf/site.conf
     - echo 'INHERIT += "rm_work"' >> conf/site.conf
@@ -66,6 +68,8 @@ yocto_scarthgap_seeding:
       aud: https://tokens.kde.org
   script:
     - MACHINE=visionfive2 . ./setup-environment
+# workaround for scarthgap CI, because meta-kde does not support scarthgap but only one bblayers file is shared
+    - sed -i 's|${BSPDIR}/sources/meta-kde | |g' conf/bblayers.conf
 # host local cache: for sstate sharing without hash equiv server only basic hash works
     - echo 'BB_HASHSERVE = ""' >> conf/site.conf
     - echo 'BB_SIGNATURE_HANDLER = "OEBasicHash"' >> conf/site.conf
