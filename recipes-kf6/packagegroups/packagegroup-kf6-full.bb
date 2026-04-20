@@ -3,81 +3,83 @@
 
 SUMMARY = "All meta-kf6 packages"
 DESCRIPTION = "This packagegroup is pimarily meant for release testing."
-PACKAGE_ARCH = "${MACHINE_ARCH}"
+BUGTRACKER = "https://invent.kde.org/packaging/yocto-meta-kf6/"
+SECTION = "libs"
 REQUIRED_DISTRO_FEATURES = "wayland x11"
 PV = "5.249.0"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit packagegroup features_check
 
-RDEPENDS:${PN} += " \
-kwindowsystem \
-kconfig \
-attica \
-kplotting \
-karchive \
-kuserfeedback \
-kquickcharts \
-modemmanager-qt \
-prison \
-sonnet \
-breeze-icons \
-bluez-qt \
-kholidays \
-threadweaver \
-kitemmodels \
-kcodecs \
-kglobalaccel \
-solid \
-kcalendarcore \
-kitemviews \
-kdnssd \
-ktexttemplate \
-networkmanager-qt \
-syntax-highlighting \
-kcoreaddons \
-kdbusaddons \
-kidletime \
-kirigami \
-kwidgetsaddons \
-ki18n \
-kguiaddons \
-kservice \
-knotifyconfig \
-qqc2-desktop-style \
-krunner \
-kdeclarative \
-kdesu \
-ktexteditor \
-kwallet \
-knewstuff \
-ksvg \
-kded \
-purpose \
-kparts \
-kbookmarks \
-kconfigwidgets \
-ktextwidgets \
-baloo \
-kio \
-kiconthemes \
-kdav \
-kcmutils \
-kxmlgui \
-frameworkintegration \
-kcrash \
-kcolorscheme \
-kfilemetadata \
-knotifications \
-kauth \
-kjobwidgets \
-kunitconversion \
-kcompletion \
-kstatusnotifieritem \
-kpeople \
-kcontacts \
-kpackage \
-kpty \
-kimageformats \
-syndication \
-kdoctools \
+RDEPENDS:${PN} += "\
+    attica \
+    baloo \
+    bluez-qt \
+    breeze-icons \
+    frameworkintegration \
+    karchive \
+    kauth \
+    kbookmarks \
+    kcalendarcore \
+    kcmutils \
+    kcodecs \
+    kcolorscheme \
+    kcompletion \
+    kconfig \
+    kconfigwidgets \
+    kcontacts \
+    kcoreaddons \
+    kcrash \
+    kdav \
+    kdbusaddons \
+    kdeclarative \
+    kded \
+    kdesu \
+    kdnssd \
+    kdoctools \
+    kfilemetadata \
+    kglobalaccel \
+    kguiaddons \
+    kholidays \
+    ki18n \
+    kiconthemes \
+    kidletime \
+    kimageformats \
+    kio \
+    kirigami \
+    kitemmodels \
+    kitemviews \
+    kjobwidgets \
+    knewstuff \
+    knotifications \
+    knotifyconfig \
+    kpackage \
+    kparts \
+    kpeople \
+    kplotting \
+    kpty \
+    kquickcharts \
+    krunner \
+    kservice \
+    kstatusnotifieritem \
+    ksvg \
+    ktexteditor \
+    ktexttemplate \
+    ktextwidgets \
+    kunitconversion \
+    kuserfeedback \
+    kwallet \
+    kwidgetsaddons \
+    kwindowsystem \
+    kxmlgui \
+    modemmanager-qt \
+    networkmanager-qt \
+    prison \
+    purpose \
+    qqc2-desktop-style \
+    solid \
+    sonnet \
+    syndication \
+    syntax-highlighting \
+    threadweaver \
 "
