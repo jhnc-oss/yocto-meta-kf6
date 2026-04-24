@@ -10,6 +10,8 @@ RET=0
 
 # Paths to exclude (modify as needed)
 EXCLUDES=(
+    # Exclude backported wayland recipe from upstream
+    "./recipes-graphics/wayland/*"
 )
 
 # Build find exclusion arguments
