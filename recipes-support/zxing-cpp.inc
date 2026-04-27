@@ -10,7 +10,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=fa818a259cbed7ce8bc2a22d35a464fc"
 
 SRC_URI = "git://github.com/zxing-cpp/zxing-cpp.git;nobranch=1;protocol=https"
 
-S = "${UNPACKDIR}/git"
+S = "${WORKDIR}/git"
 
 EXTRA_OECMAKE += "-DBUILD_EXAMPLES=OFF \
                   -DBUILD_DEPENDENCIES=LOCAL \

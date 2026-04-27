@@ -20,7 +20,7 @@ SRC_URI = "git://gitlab.com/accounts-sso/libaccounts-qt.git;branch=master;protoc
 "
 SRCREV = "57641e601bbb1cd1dd63d616a83eab341515c3ee"
 
-S = "${UNPACKDIR}/git"
+S = "${WORKDIR}/git"
 
 #EXTRA_OEMAKE = "INSTALL_PREFIX='${prefix}'"
 

@@ -16,7 +16,7 @@ DEPENDS += "qtbase \
 "
 
 SRC_URI = "git://github.com/danvratil/qcoro.git;nobranch=1;protocol=https"
-S = "${UNPACKDIR}/git"
+S = "${WORKDIR}/git"
 
 inherit qt6-cmake
 

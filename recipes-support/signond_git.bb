@@ -18,7 +18,7 @@ SRC_URI = "git://gitlab.com/nicolasfella/signond.git;branch=qt6;protocol=https \
 "
 SRCREV = "c8ad98249af541514ff7a81634d3295e712f1a39"
 
-S = "${UNPACKDIR}/git"
+S = "${WORKDIR}/git"
 
 FILES:${PN} += "${libdir}/signon \
                 ${datadir}/dbus-1 \

@@ -18,7 +18,7 @@ DEPENDS += "glib-2.0 \
 SRC_URI = "git://gitlab.com/accounts-sso/libaccounts-glib.git;branch=master;protocol=https"
 SRCREV = "c823beed760ab2428f3355db06f48c4b5c14c62e"
 
-S = "${UNPACKDIR}/git"
+S = "${WORKDIR}/git"
 
 EXTRA_OEMESON = "-Ddocs=false \
                  -Dtests=false \
