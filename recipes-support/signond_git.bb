@@ -12,13 +12,14 @@ inherit qt6-qmake pkgconfig
 
 DEPENDS += "qtbase"
 
+# for compatbility with Yocto releases before whinlatter
+BB_GIT_DEFAULT_DESTSUFFIX ?= "${BP}"
+
 # Use fork for Qt6 compatibility
-SRC_URI = "git://gitlab.com/nicolasfella/signond.git;branch=qt6;protocol=https \
+SRC_URI = "git://gitlab.com/nicolasfella/signond.git;branch=qt6;protocol=https;destsuffix=${BB_GIT_DEFAULT_DESTSUFFIX} \
            file://0001-Disable-doc-generation.patch \
 "
 SRCREV = "c8ad98249af541514ff7a81634d3295e712f1a39"
-
-S = "${WORKDIR}/git"
 
 FILES:${PN} += "${libdir}/signon \
                 ${datadir}/dbus-1 \
