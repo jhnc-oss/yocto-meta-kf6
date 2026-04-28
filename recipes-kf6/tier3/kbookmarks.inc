@@ -13,7 +13,6 @@ DEPENDS += "kauth-native \
             kcodecs \
             kconfig \
             kconfig-native \
-            kconfigwidgets \
             kcoreaddons \
             kcoreaddons-native \
             kiconthemes \
