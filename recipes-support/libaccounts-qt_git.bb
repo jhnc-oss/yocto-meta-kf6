@@ -15,14 +15,13 @@ DEPENDS += "glib-2.0 \
             qtbase \
 "
 
-SRC_URI = "git://gitlab.com/accounts-sso/libaccounts-qt.git;branch=master;protocol=https \
+# for compatbility with Yocto releases before whinlatter
+BB_GIT_DEFAULT_DESTSUFFIX ?= "${BP}"
+
+SRC_URI = "git://gitlab.com/accounts-sso/libaccounts-qt.git;branch=master;protocol=https;destsuffix=${BB_GIT_DEFAULT_DESTSUFFIX} \
            file://0001-Disable-doc-generation.patch \
 "
 SRCREV = "57641e601bbb1cd1dd63d616a83eab341515c3ee"
-
-S = "${WORKDIR}/git"
-
-#EXTRA_OEMAKE = "INSTALL_PREFIX='${prefix}'"
 
 do_install:append() {
     # do not install test executable
