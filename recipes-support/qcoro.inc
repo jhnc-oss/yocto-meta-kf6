@@ -15,8 +15,10 @@ DEPENDS += "qtbase \
             qttools-native \
 "
 
-SRC_URI = "git://github.com/danvratil/qcoro.git;nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
+# for compatbility with Yocto releases before whinlatter
+BB_GIT_DEFAULT_DESTSUFFIX ?= "${BP}"
+
+SRC_URI = "git://github.com/danvratil/qcoro.git;nobranch=1;protocol=https;destsuffix=${BB_GIT_DEFAULT_DESTSUFFIX}"
 
 inherit qt6-cmake
 
