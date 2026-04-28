@@ -14,7 +14,6 @@ PR = "r0"
 DEPENDS += "karchive \
             kbookmarks \
             kcompletion \
-            kconfigwidgets \
             kcrash \
             kdbusaddons \
             kiconthemes \
