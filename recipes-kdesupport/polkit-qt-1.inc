@@ -11,9 +11,11 @@ PR = "r0"
 
 DEPENDS += "polkit qtbase"
 
-SRC_URI = "git://invent.kde.org/libraries/polkit-qt-1.git;nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
+# for compatbility with Yocto releases before whinlatter
+BB_GIT_DEFAULT_DESTSUFFIX ?= "${BP}"
+
+SRC_URI = "git://invent.kde.org/libraries/polkit-qt-1.git;nobranch=1;protocol=https;destsuffix=${BB_GIT_DEFAULT_DESTSUFFIX}"
 
 inherit kf6_cmake_framework
 
-FILES:${PN}-dev += "${libdir}/cmake/PolkitQt5-1/*"
+FILES:${PN}-dev += "${libdir}/cmake/*"
