@@ -10,8 +10,7 @@ HOMEPAGE = "https://invent.kde.org/frameworks/kservice"
 LICENSE = "LGPL-2.1-only"
 PR = "r0"
 
-DEPENDS += "bison-native \
-            kconfig \
+DEPENDS += "kconfig \
             kconfig-native \
             kcoreaddons \
             kcoreaddons-native \
