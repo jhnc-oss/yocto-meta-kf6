@@ -14,7 +14,6 @@ DEPENDS += "kauth-native \
             kcompletion \
             kconfig \
             kconfig-native \
-            kconfigwidgets \
             kcoreaddons-native \
             kservice \
             kwidgetsaddons \
