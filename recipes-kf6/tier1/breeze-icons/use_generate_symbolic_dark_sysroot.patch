@@ -5,16 +5,16 @@ SPDX-License-Identifier: MIT
 
 Signed-off-by: Marc Ferland <marc.ferland@sonatest.com>
 
-Index: breeze-icons-6.18.0/icons-dark/CMakeLists.txt
+Index: breeze-icons-6.25.0/icons/CMakeLists.txt
 ===================================================================
---- breeze-icons-6.18.0.orig/icons-dark/CMakeLists.txt
-+++ breeze-icons-6.18.0/icons-dark/CMakeLists.txt
-@@ -15,7 +15,7 @@ if(WITH_ICON_GENERATION)
-     # No trainling slashes on dirs. It will break scripts.
-     add_custom_target(breeze-generate-symbolic-dark ALL
-         COMMENT "Generating symbolic dark icons"
--        COMMAND $<TARGET_FILE:generate-symbolic-dark> ${CMAKE_SOURCE_DIR}/icons ${ICON_GEN_DIR}
-+        COMMAND generate-symbolic-dark ${CMAKE_SOURCE_DIR}/icons ${ICON_GEN_DIR}
-     )
-     # Auto-generate 24px monochrome icons from 22px versions
-     add_custom_target(breeze-generate-24px-versions-dark ALL
+--- breeze-icons-6.25.0/icons/CMakeLists.txt
++++ breeze-icons-6.25.0/icons/CMakeLists.txt
+@@ -52,7 +52,7 @@ else()
+     # generate dark icons + do checking and create the resource
+     add_custom_command(OUTPUT ${RESOURCE_FILE}
+         COMMENT "Generating symbolic dark icons and resources"
+-        COMMAND $<TARGET_FILE:generate-symbolic-dark> ${CMAKE_SOURCE_DIR}/icons ${ICON_GEN_DIR} ${ICON_DARK_GEN_DIR}
++        COMMAND generate-symbolic-dark ${CMAKE_SOURCE_DIR}/icons ${ICON_GEN_DIR} ${ICON_DARK_GEN_DIR}
+         COMMAND $<TARGET_FILE:qrcAlias> -o ${RESOURCE_FILE} ${CMAKE_SOURCE_DIR}/icons ${ICON_GEN_DIR} # used for the resource
+         COMMAND $<TARGET_FILE:qrcAlias> -o ${RESOURCE_FILE}.dark.dummy ${CMAKE_SOURCE_DIR}/icons ${ICON_GEN_DIR} ${ICON_DARK_GEN_DIR} # used for checking only
+         COMMAND Qt6::rcc --binary -o ${RESOURCE_FILE_BINARY} ${RESOURCE_FILE} # FIXME: remove after e.g. Kexi is ported
