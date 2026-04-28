@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: CC0-1.0
+
+require ${PN}.inc
+SRC_URI = "https://download.kde.org/stable/frameworks/6.25/qqc2-desktop-style-6.25.0.tar.xz"
+SRC_URI[sha256sum] = "c09070e57a196baab50e62aac5e17051666a898d95ac29d8853c6634a02ab9d1"
+
