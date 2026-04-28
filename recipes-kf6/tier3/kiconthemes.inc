@@ -14,7 +14,6 @@ DEPENDS += "breeze-icons \
             karchive \
             kauth-native \
             kconfig-native \
-            kconfigwidgets \
             kcoreaddons \
             kcoreaddons-native \
             kwidgetsaddons \
