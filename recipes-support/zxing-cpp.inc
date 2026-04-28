@@ -8,9 +8,10 @@ HOMEPAGE = "https://github.com/zxing-cpp/zxing-cpp"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=fa818a259cbed7ce8bc2a22d35a464fc"
 
-SRC_URI = "git://github.com/zxing-cpp/zxing-cpp.git;nobranch=1;protocol=https"
+# for compatbility with Yocto releases before whinlatter
+BB_GIT_DEFAULT_DESTSUFFIX ?= "${BP}"
 
-S = "${WORKDIR}/git"
+SRC_URI = "git://github.com/zxing-cpp/zxing-cpp.git;nobranch=1;protocol=https;destsuffix=${BB_GIT_DEFAULT_DESTSUFFIX}"
 
 EXTRA_OECMAKE += "-DBUILD_EXAMPLES=OFF \
                   -DBUILD_DEPENDENCIES=LOCAL \
