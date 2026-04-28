@@ -15,10 +15,11 @@ DEPENDS += "glib-2.0 \
             sqlite3 \
 "
 
-SRC_URI = "git://gitlab.com/accounts-sso/libaccounts-glib.git;branch=master;protocol=https"
-SRCREV = "c823beed760ab2428f3355db06f48c4b5c14c62e"
+# for compatbility with Yocto releases before whinlatter
+BB_GIT_DEFAULT_DESTSUFFIX ?= "${BP}"
 
-S = "${WORKDIR}/git"
+SRC_URI = "git://gitlab.com/accounts-sso/libaccounts-glib.git;branch=master;protocol=https;destsuffix=${BB_GIT_DEFAULT_DESTSUFFIX}"
+SRCREV = "c823beed760ab2428f3355db06f48c4b5c14c62e"
 
 EXTRA_OEMESON = "-Ddocs=false \
                  -Dtests=false \
