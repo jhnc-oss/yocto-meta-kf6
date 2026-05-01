@@ -11,13 +11,11 @@ PR = "r0"
 
 DEPENDS += "docbook-xml-dtd4 \
             docbook-xsl-stylesheets \
-            docbook-xsl-stylesheets-native \
             karchive \
             kdoctools-native \
             ki18n \
-            liburi-perl-native \
+            liburi-perl \
             libxml2 \
-            libxml2-native \
             libxslt \
 "
 
@@ -36,18 +34,6 @@ EXTRA_OECMAKE:class-target = "-DMEINPROC6_EXECUTABLE=${STAGING_DIR_NATIVE}/${bin
                               -DCHECKXML6_EXECUTABLE=${STAGING_DIR_NATIVE}/${bindir}/checkXML6 \
                               -DRELOCATABLE_DOCBOOK_FILES=ON \
 "
-
-# TODO split recipe for native and target to avoid stripping warnings for applications
-sysroot_stage_all:append:class-native () {
-    mkdir -p ${SYSROOT_DESTDIR}${bindir}
-    cp ${B}/bin/docbookl10nhelper ${SYSROOT_DESTDIR}${bindir}
-}
-
-sysroot_stage_all:append:class-target () {
-    mkdir -p ${SYSROOT_DESTDIR}${bindir}
-    cp ${STAGING_BINDIR_NATIVE}/checkXML6 ${SYSROOT_DESTDIR}${bindir}
-    cp ${STAGING_BINDIR_NATIVE}/meinproc6 ${SYSROOT_DESTDIR}${bindir}
-}
 
 do_compile:append() {
     # TODO this reworks the all-l18n.xml paths to be host-independent
