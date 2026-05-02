@@ -32,10 +32,10 @@ fi
 
 # Run linter
 for file in "${BB_FILES[@]}"; do
-    echo "Linting $file..."
-    if ! oelint-adv "$file"; then
+    echo "Linting ${file}..."
+    if ! oelint-adv "${file}"; then
         echo "Lint failed on $file"
-	RET=1
+        RET=1
     fi
 done
 
