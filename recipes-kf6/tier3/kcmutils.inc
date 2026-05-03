@@ -17,6 +17,7 @@ DEPENDS:append:class-target = " \
     kcoreaddons-native \
     kiconthemes \
     kio \
+    kirigami \
     kitemviews \
     kpackage \
     kpackage-native \
