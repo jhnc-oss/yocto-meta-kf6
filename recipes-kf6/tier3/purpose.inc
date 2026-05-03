@@ -10,6 +10,7 @@ LICENSE = "LGPL-2.1-or-later"
 PR = "r0"
 
 DEPENDS += "kauth-native \
+            kcmutils \
             kconfig \
             kconfig-native \
             kcoreaddons \
@@ -17,7 +18,9 @@ DEPENDS += "kauth-native \
             ki18n \
             kio \
             kirigami \
+            kitemmodels \
             knotifications \
+            prison \
             qtbase \
             qtdeclarative \
 "
