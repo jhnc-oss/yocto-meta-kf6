@@ -1,0 +1,34 @@
+From 080f7c11fe056a46e9471163336728f1969e3b33 Mon Sep 17 00:00:00 2001
+From: Andreas Cord-Landwehr <cordlandwehr@kde.org>
+Date: Tue, 21 Apr 2026 20:54:58 +0200
+Subject: [PATCH] Fix reproducible build issues
+
+Do not generate absolute paths to source code because this breaks
+assumptions for relocatable locations e.g. in Yocto setups.
+
+Signed-off-by: Andreas Cord-Landwehr <cordlandwehr@kde.org>
+
+SPDX-FileCopyrightText: Andreas Cord-Landwehr <cordlandwehr@kde.org>
+SPDX-License-Identifier: MIT
+
+Upstream-Status: Inappropriate [oe-specific]
+---
+ src/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 9996851..c20bfb5 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -50,7 +50,7 @@ flex_target(
+     KF6HolidaysLexer
+     parsers/plan2/holidayscannerplan.lpp
+     ${CMAKE_CURRENT_BINARY_DIR}/holidayscannerplan.cpp
+-    COMPILE_FLAGS "-i -B"
++    COMPILE_FLAGS "-i -B --noline"
+ )
+ add_flex_bison_dependency(
+     KF6HolidaysLexer
+-- 
+2.53.0
+
