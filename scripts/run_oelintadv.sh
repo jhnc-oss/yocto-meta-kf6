@@ -12,6 +12,8 @@ RET=0
 EXCLUDES=(
     # Exclude backported wayland recipe from upstream
     "./recipes-graphics/wayland/*"
+    # Exclude backported cmake recipe from upstram
+    "./recipes-devtools/cmake/*"
 )
 
 # Build find exclusion arguments
