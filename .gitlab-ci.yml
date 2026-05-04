@@ -60,7 +60,7 @@ lint:oelint:
 yocto_scarthgap:
   extends: .yocto_base
   rules:
-    - if: $CI_COMMIT_BRANCH != "master"
+    - if: '$CI_COMMIT_BRANCH != "scarthgap" && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "scarthgap"'
   script:
     - MACHINE=visionfive2 . ./setup-environment
 # workaround for scarthgap CI, because meta-kde does not support scarthgap but only one bblayers file is shared
@@ -76,7 +76,7 @@ yocto_scarthgap:
 yocto_scarthgap_seeding:
   extends: .yocto_base
   rules:
-    - if: $CI_COMMIT_BRANCH == "master"
+    - if: $CI_COMMIT_BRANCH == "scarthgap"
   id_tokens:
     MINIO_OIDC:
       aud: https://tokens.kde.org
