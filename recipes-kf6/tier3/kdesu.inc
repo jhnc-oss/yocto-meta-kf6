@@ -8,7 +8,6 @@ SUMMARY = "KDE Su"
 DESCRIPTION = "User interface for running shell commands with root privileges"
 HOMEPAGE = "https://invent.kde.org/frameworks/kdesu"
 LICENSE = "LGPL-2.1-only"
-PR = "r0"
 
 DEPENDS += "kconfig \
             kconfig-native \

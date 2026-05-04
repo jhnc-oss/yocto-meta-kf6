@@ -9,7 +9,6 @@ SUMMARY = "KItemModels"
 DESCRIPTION = "Set of item models extending the Qt model-view framework"
 HOMEPAGE = "https://invent.kde.org/frameworks/kitemmodels"
 LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only)"
-PR = "r0"
 
 DEPENDS += "qtbase"
 

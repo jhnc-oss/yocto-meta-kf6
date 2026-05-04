@@ -9,7 +9,6 @@ SUMMARY = "KGuiAddons"
 DESCRIPTION = "Utilities for graphical user interfaces"
 HOMEPAGE = "https://invent.kde.org/frameworks/kguiaddons"
 LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
-PR = "r0"
 
 # licenses only contained in autotests
 REUSE_LICENSECHECK_WHITELIST = "GPL-2.0-only GPL-3.0-only LicenseRef-KDE-Accepted-GPL"

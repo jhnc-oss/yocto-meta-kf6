@@ -8,7 +8,6 @@ SUMMARY = "KConfigWidgets"
 DESCRIPTION = "Widgets for configuration dialogs"
 HOMEPAGE = "https://invent.kde.org/frameworks/kconfigwidgets"
 LICENSE = "LGPL-2.1-only"
-PR = "r0"
 
 DEPENDS += "kauth \
             kauth-native \

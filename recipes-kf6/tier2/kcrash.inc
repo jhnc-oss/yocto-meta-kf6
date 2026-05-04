@@ -9,7 +9,6 @@ DESCRIPTION = "Graceful handling of application crashes"
 HOMEPAGE = "https://invent.kde.org/frameworks/kcrash"
 REUSE_LICENSECHECK_WHITELIST = "CC0-1.0"
 LICENSE = "LGPL-2.0-or-later"
-PR = "r0"
 
 DEPENDS += "kcoreaddons \
             kcoreaddons-native \

@@ -6,7 +6,6 @@ SUMMARY = "KDav"
 DESCRIPTION = "This is an DAV protocol implementation with KJobs"
 HOMEPAGE = "https://invent.kde.org/frameworks/kdav"
 LICENSE = "LGPL-2.0-or-later"
-PR = "r0"
 
 DEPENDS += "kcoreaddons \
             kcoreaddons-native \

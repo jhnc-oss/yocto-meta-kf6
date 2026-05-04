@@ -7,7 +7,6 @@ SUMMARY = "Sonnet"
 DESCRIPTION = "Spelling framework for Qt"
 HOMEPAGE = "https://invent.kde.org/frameworks/sonnet"
 LICENSE = "BSD-3-Clause & LGPL-2.0-or-later & LGPL-2.1-or-later"
-PR = "r0"
 
 DEPENDS += "hunspell \
             qtbase \

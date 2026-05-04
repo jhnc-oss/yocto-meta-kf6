@@ -8,7 +8,6 @@ SUMMARY = "KNotifyConfig"
 DESCRIPTION = "Configuration dialog for desktop notifications"
 HOMEPAGE = "https://invent.kde.org/frameworks/knotifyconfig"
 LICENSE = "LGPL-2.0-only"
-PR = "r0"
 
 DEPENDS += "kauth-native \
             kcompletion \

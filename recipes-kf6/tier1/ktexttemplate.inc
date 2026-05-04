@@ -6,7 +6,6 @@ SUMMARY = "KTextTemplate"
 DESCRIPTION = "Library to allow application developers to separate the structure of documents from the data they contain"
 HOMEPAGE = "https://invent.kde.org/frameworks/ktexttemplate"
 LICENSE = "LGPL-2.1-or-later"
-PR = "r0"
 
 DEPENDS += "qtbase qtdeclarative"
 

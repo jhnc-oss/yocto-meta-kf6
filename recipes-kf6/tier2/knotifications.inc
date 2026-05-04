@@ -7,7 +7,6 @@ SUMMARY = "KNotifications"
 DESCRIPTION = "Desktop notifications"
 HOMEPAGE = "https://invent.kde.org/frameworks/knotifications"
 LICENSE = "LGPL-2.1-only"
-PR = "r0"
 
 DEPENDS += "kconfig \
             kconfig-native \

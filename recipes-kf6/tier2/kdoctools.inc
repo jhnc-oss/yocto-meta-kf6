@@ -7,7 +7,6 @@ SUMMARY = "KDocTools"
 DESCRIPTION = "Create documentation from DocBook"
 HOMEPAGE = "https://invent.kde.org/frameworks/kdoctools"
 LICENSE = "LGPL-2.1-only"
-PR = "r0"
 
 DEPENDS += "docbook-xml-dtd4 \
             docbook-xsl-stylesheets \

@@ -7,7 +7,6 @@ SUMMARY = "Kirigami"
 DESCRIPTION = "A QtQuick based components set"
 HOMEPAGE = "https://invent.kde.org/frameworks/kirigami"
 LICENSE = "LGPL-2.0-or-later"
-PR = "r0"
 
 DEPENDS += "qtdeclarative qtsvg"
 

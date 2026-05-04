@@ -9,7 +9,6 @@ SUMMARY = "KFileMetaData"
 DESCRIPTION = "A library for extracting file metadata"
 HOMEPAGE = "https://invent.kde.org/frameworks/kfilemetadata"
 LICENSE = "BSD-3-Clause & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
-PR = "r0"
 
 DEPENDS += "ffmpeg \
             karchive \

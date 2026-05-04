@@ -9,7 +9,6 @@ SUMMARY = "KCodecs"
 DESCRIPTION = "KCodecs provide a collection of methods to manipulate strings using various encodings"
 HOMEPAGE = "https://invent.kde.org/frameworks/kcodecs"
 LICENSE = "MIT & BSD-3-Clause & LGPL-2.0-or-later & LGPL-2.0-only"
-PR = "r0"
 
 DEPENDS += "gperf-native qtbase"
 

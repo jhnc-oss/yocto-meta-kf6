@@ -8,7 +8,6 @@ SUMMARY = "KCMUtils"
 DESCRIPTION = "Utilities for KDE System Settings modules"
 HOMEPAGE = "https://invent.kde.org/frameworks/kcmutils"
 LICENSE = "LGPL-2.0-only"
-PR = "r0"
 
 DEPENDS:append:class-target = " \
     kconfig-native \

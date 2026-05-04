@@ -6,7 +6,6 @@ SUMMARY = "KStatusNotifierItem"
 DESCRIPTION = "Implementation of Status Notifier Items"
 HOMEPAGE = "https://invent.kde.org/frameworks/kstatusnotifieritem"
 LICENSE = "CC0-1.0 & LGPL-2.0-or-later"
-PR = "r0"
 
 DEPENDS += "kwindowsystem qtbase"
 

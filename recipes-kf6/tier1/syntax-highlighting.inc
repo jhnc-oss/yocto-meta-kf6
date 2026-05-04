@@ -7,7 +7,6 @@ SUMMARY = "Syntax Highlighting Engine"
 DESCRIPTION = "Syntax highlighting Engine for Structured Text and Code"
 HOMEPAGE = "https://invent.kde.org/frameworks/syntax-highlighting"
 LICENSE = "MIT & LGPL-2.0-or-later"
-PR = "r0"
 
 # licenses only contained in autotests
 REUSE_LICENSECHECK_WHITELIST = "LGPL-2.1-or-later GPL-2.0-only"

@@ -7,7 +7,6 @@ SUMMARY = "KQuickCharts"
 DESCRIPTION = "A QtQuick plugin providing high-performance charts"
 HOMEPAGE = "https://invent.kde.org/frameworks/kquickcharts"
 LICENSE = "MIT & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
-PR = "r0"
 
 DEPENDS += "qtdeclarative"
 

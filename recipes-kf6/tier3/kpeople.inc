@@ -8,7 +8,6 @@ SUMMARY = "KPeople"
 DESCRIPTION = "Provides access to all contacts and aggregates them by person"
 HOMEPAGE = "https://invent.kde.org/frameworks/kpeople"
 LICENSE = "LGPL-2.1-or-later"
-PR = "r0"
 
 DEPENDS += "kconfig-native \
             kcontacts \

@@ -7,7 +7,6 @@ SUMMARY = "KCompletion"
 DESCRIPTION = "Powerful completion framework, including completion-enabled lineedit and combobox"
 HOMEPAGE = "https://invent.kde.org/frameworks/kcompletion"
 LICENSE = "BSD-3-Clause & LGPL-2.0-or-later & LGPL-2.1-or-later"
-PR = "r0"
 
 DEPENDS += "kcodecs \
             kconfig \

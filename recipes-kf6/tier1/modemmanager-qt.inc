@@ -7,7 +7,6 @@ SUMMARY = "ModemManagerQt"
 DESCRIPTION = "Qt wrapper for ModemManager DBus API"
 HOMEPAGE = "https://invent.kde.org/frameworks/modemmanager-qt"
 LICENSE = "BSD-3-Clause & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
-PR = "r0"
 
 DEPENDS += "modemmanager qtbase"
 

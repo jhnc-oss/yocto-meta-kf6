@@ -7,7 +7,6 @@ SUMMARY = "Purpose Framework"
 DESCRIPTION = "Offers available actions for a specific purpose"
 HOMEPAGE = "https://invent.kde.org/frameworks/purpose"
 LICENSE = "LGPL-2.1-or-later"
-PR = "r0"
 
 DEPENDS += "kauth-native \
             kcmutils \

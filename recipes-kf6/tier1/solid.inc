@@ -10,7 +10,6 @@ SUMMARY = "Solid"
 DESCRIPTION = "Desktop hardware abstraction"
 HOMEPAGE = "https://invent.kde.org/frameworks/solid"
 LICENSE = "BSD-3-Clause & LGPL-2.1-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
-PR = "r0"
 
 DEPENDS += "bison-native qtbase"
 

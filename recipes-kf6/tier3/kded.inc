@@ -8,7 +8,6 @@ SUMMARY = "KDE Daemon"
 DESCRIPTION = "Central daemon of KDE work spaces"
 HOMEPAGE = "https://invent.kde.org/frameworks/kded"
 LICENSE = "LGPL-2.0-only"
-PR = "r0"
 
 DEPENDS += "kauth-native \
             kconfig \

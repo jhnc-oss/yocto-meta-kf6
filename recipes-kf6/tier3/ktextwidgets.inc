@@ -8,7 +8,6 @@ SUMMARY = "KTextWidgets"
 DESCRIPTION = "Text editing widgets"
 HOMEPAGE = "https://invent.kde.org/frameworks/ktextwidgets"
 LICENSE = "LGPL-2.1-or-later & (LGPL-2.0-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
-PR = "r0"
 
 DEPENDS += "kauth-native \
             kcompletion \

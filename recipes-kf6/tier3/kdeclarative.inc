@@ -8,7 +8,6 @@ SUMMARY = "KDeclarative"
 DESCRIPTION = "Integration of QML and KDE work spaces"
 HOMEPAGE = "https://invent.kde.org/frameworks/kdeclarative"
 LICENSE = "LGPL-2.0-or-later & LGPL-2.1-or-later & MIT"
-PR = "r0"
 
 DEPENDS += "kauth-native \
             kconfig \

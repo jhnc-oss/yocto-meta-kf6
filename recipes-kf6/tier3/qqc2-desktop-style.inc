@@ -7,7 +7,6 @@ SUMMARY = "QQC2 Desktop Style"
 DESCRIPTION = "This is a style for Qt Quick Controls which uses the application's QStyle to paint the controls in order to give them native look and feel"
 HOMEPAGE = "https://invent.kde.org/frameworks/qqc2-desktop-style"
 LICENSE = "LGPL-3.0-only"
-PR = "r0"
 
 DEPENDS += "kauth-native \
             kconfig-native \

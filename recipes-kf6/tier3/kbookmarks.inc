@@ -7,7 +7,6 @@ SUMMARY = "KBookmarks"
 DESCRIPTION = "Bookmarks management library"
 HOMEPAGE = "https://invent.kde.org/frameworks/kbookmarks"
 LICENSE = "LGPL-2.0-only"
-PR = "r0"
 
 DEPENDS += "kauth-native \
             kcodecs \

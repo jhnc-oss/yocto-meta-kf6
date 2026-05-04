@@ -8,7 +8,6 @@ SUMMARY = "KRunner"
 DESCRIPTION = "Framework for Plasma runners"
 HOMEPAGE = "https://invent.kde.org/frameworks/krunner"
 LICENSE = "LGPL-2.0-or-later & LGPL-2.1-only"
-PR = "r0"
 
 DEPENDS += "kconfig \
             kconfig-native \

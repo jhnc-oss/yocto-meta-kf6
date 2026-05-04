@@ -8,7 +8,6 @@ SUMMARY = "Baloo"
 DESCRIPTION = "Baloo is a framework for searching and managing metadata"
 HOMEPAGE = "https://invent.kde.org/frameworks/baloo"
 LICENSE = "LGPL-2.1-only"
-PR = "r0"
 
 DEPENDS += "kauth-native \
             kconfig \

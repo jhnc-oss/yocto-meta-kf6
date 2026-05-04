@@ -8,7 +8,6 @@ DESCRIPTION = "Prison is a barcode api currently offering a nice Qt api to produ
 HOMEPAGE = "https://invent.kde.org/frameworks/prison"
 REUSE_LICENSECHECK_WHITELIST = "CC0-1.0"
 LICENSE = "MIT & BSD-3-Clause"
-PR = "r0"
 
 DEPENDS += "libdmtx \
             qrencode \

@@ -11,7 +11,6 @@ DESCRIPTION = "Persistent platform-independent application settings"
 HOMEPAGE = "https://invent.kde.org/frameworks/kconfig/"
 
 LICENSE = "MIT & BSD-2-Clause & BSD-3-Clause & LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
-PR = "r0"
 
 DEPENDS += "kconfig-native qtbase"
 

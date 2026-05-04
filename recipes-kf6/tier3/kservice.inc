@@ -8,7 +8,6 @@ SUMMARY = "KService"
 DESCRIPTION = "KService allows to query information about installed applications and their associated file types"
 HOMEPAGE = "https://invent.kde.org/frameworks/kservice"
 LICENSE = "LGPL-2.1-only"
-PR = "r0"
 
 DEPENDS += "kconfig \
             kconfig-native \

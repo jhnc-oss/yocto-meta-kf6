@@ -8,7 +8,6 @@ SUMMARY = "KWallet Framework"
 DESCRIPTION = "Safe desktop-wide storage for passwords"
 HOMEPAGE = "https://invent.kde.org/frameworks/kwallet"
 LICENSE = "LGPL-2.1-or-later"
-PR = "r0"
 
 DEPENDS += "kauth-native \
             kconfig \

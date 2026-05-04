@@ -9,7 +9,6 @@ SUMMARY = "KDNSSD Framework"
 DESCRIPTION = "Network service discovery using Zeroconf"
 HOMEPAGE = "https://invent.kde.org/frameworks/kdnssd"
 LICENSE = "LGPL-2.0-or-later & BSD-3-Clause"
-PR = "r0"
 
 DEPENDS += "avahi qtbase"
 

@@ -10,7 +10,6 @@ DESCRIPTION = "Qt addon library with a collection of non-GUI utilities"
 HOMEPAGE = "https://invent.kde.org/frameworks/kcoreaddons"
 REUSE_LICENSECHECK_WHITELIST = "CC0-1.0"
 LICENSE = "LGPL-2.1-only"
-PR = "r0"
 
 DEPENDS += "kcoreaddons-native qtbase"
 

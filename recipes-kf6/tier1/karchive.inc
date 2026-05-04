@@ -14,7 +14,6 @@ HOMEPAGE = "https://invent.kde.org/frameworks/karchive"
 
 REUSE_LICENSECHECK_WHITELIST = "LGPL-2.0 LGPL-3.0 LicenseRef-KDE-Accepted-LGPL"
 LICENSE = "BSD-2-Clause & LGPL-2.0-or-later"
-PR = "r0"
 
 DEPENDS += "bzip2 qtbase xz zlib"
 

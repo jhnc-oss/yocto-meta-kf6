@@ -8,7 +8,6 @@ SUMMARY = "KTextEditor"
 DESCRIPTION = "Full text editor component"
 HOMEPAGE = "https://invent.kde.org/frameworks/ktexteditor"
 LICENSE = "MIT & BSD-2-Clause & LGPL-2.0-only"
-PR = "r0"
 
 DEPENDS += "karchive \
             kauth-native \

@@ -7,7 +7,6 @@ DESCRIPTION = "This project provides the xml files of the non-standard wayland p
 HOMEPAGE = "https://invent.kde.org/libraries/plasma-wayland-protocols"
 LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1"
-PR = "r0"
 
 DEPENDS += "extra-cmake-modules qtwayland-native"
 

@@ -6,7 +6,6 @@ SUMMARY = "KSVG"
 DESCRIPTION = "A library for rendering SVG-based themes with stylesheet re-coloring and on-disk caching"
 HOMEPAGE = "https://invent.kde.org/frameworks/ksvg"
 LICENSE = "BSD-2-Clause & LGPL-2.0-or-later"
-PR = "r0"
 
 DEPENDS += "karchive \
             kcolorscheme \

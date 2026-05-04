@@ -9,7 +9,6 @@ SUMMARY = "KWindowSystem"
 DESCRIPTION = "Access to the windowing system"
 HOMEPAGE = "https://invent.kde.org/frameworks/kwindowsystem/"
 LICENSE = "MIT & BSD-3-Clause & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
-PR = "r0"
 
 DEPENDS += "plasma-wayland-protocols \
             qtbase \

@@ -8,7 +8,6 @@ SUMMARY = "KIconThemes"
 DESCRIPTION = "Icon GUI utilities"
 HOMEPAGE = "https://invent.kde.org/frameworks/kiconthemes"
 LICENSE = "LGPL-2.1-only"
-PR = "r0"
 
 DEPENDS += "breeze-icons \
             karchive \

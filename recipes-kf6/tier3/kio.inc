@@ -9,7 +9,6 @@ DESCRIPTION = "Network transparent access to files and data"
 HOMEPAGE = "https://invent.kde.org/frameworks/kio"
 REUSE_LICENSECHECK_WHITELIST = "Qt-Commercial-exception-1.0 CC0-1.0"
 LICENSE = "LGPL-2.0-only & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL) & BSD-2-Clause & BSD-3-Clause & MIT & (GPL-2.0-only | GPL-3.0-only | LicenseRef-KDE-Accepted-GPL)"
-PR = "r0"
 
 DEPENDS += "karchive \
             kbookmarks \

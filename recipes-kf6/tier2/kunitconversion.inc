@@ -9,7 +9,6 @@ SUMMARY = "KUnitConversion"
 DESCRIPTION = "Converting physical units"
 HOMEPAGE = "https://invent.kde.org/frameworks/kunitconversion"
 LICENSE = "LGPL-2.0-or-later"
-PR = "r0"
 
 DEPENDS += "qtbase"
 

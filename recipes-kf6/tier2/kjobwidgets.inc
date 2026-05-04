@@ -11,7 +11,6 @@ DESCRIPTION = "Widgets for showing progress of asynchronous jobs"
 HOMEPAGE = "https://invent.kde.org/frameworks/kjobwidgets"
 REUSE_LICENSECHECK_WHITELIST = "LicenseRef-KDE-Accepted-GPL LGPL-3.0"
 LICENSE = "LGPL-2.0-only"
-PR = "r0"
 
 DEPENDS += "kcoreaddons \
             kcoreaddons-native \

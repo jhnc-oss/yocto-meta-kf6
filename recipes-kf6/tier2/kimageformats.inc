@@ -9,7 +9,6 @@ SUMMARY = "KImageFormats"
 DESCRIPTION = "Plugins to allow QImage to support extra file formats"
 HOMEPAGE = "https://invent.kde.org/frameworks/kimageformats"
 LICENSE = "BSD-2-Clause & LGPL-2.0-or-later & LGPL-2.1-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
-PR = "r0"
 
 DEPENDS += "karchive \
             libavif \

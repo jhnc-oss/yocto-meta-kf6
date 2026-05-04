@@ -8,7 +8,6 @@ DESCRIPTION = "Extra modules and scripts for CMake"
 HOMEPAGE = "https://invent.kde.org/frameworks/extra-cmake-modules"
 
 LICENSE = "BSD-2-Clause & BSD-3-Clause & MIT"
-PR = "r0"
 
 DEPENDS += "cmake-native \
             qtbase-native \

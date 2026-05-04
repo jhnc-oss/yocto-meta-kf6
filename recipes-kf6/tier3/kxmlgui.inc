@@ -8,7 +8,6 @@ SUMMARY = "KXMLGUI"
 DESCRIPTION = "Framework for managing menu and toolbar actions"
 HOMEPAGE = "https://invent.kde.org/frameworks/kxmlgui"
 LICENSE = "LGPL-2.1-only"
-PR = "r0"
 
 DEPENDS += "kauth-native \
             kconfig \

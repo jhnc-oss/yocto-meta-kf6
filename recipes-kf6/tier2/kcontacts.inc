@@ -7,7 +7,6 @@ SUMMARY = "KContacts"
 DESCRIPTION = "Library for working with contact information"
 HOMEPAGE = "https://invent.kde.org/frameworks/kcontacts"
 LICENSE = "MIT & BSD-3-Clause & LGPL-2.0-or-later & Unicode-DFS-2016"
-PR = "r0"
 
 DEPENDS += "kcodecs \
             kconfig \

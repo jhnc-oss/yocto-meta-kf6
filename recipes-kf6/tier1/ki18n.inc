@@ -9,7 +9,6 @@ SUMMARY = "Ki18n"
 DESCRIPTION = "KI18n provides functionality for internationalizing user interface text in applications"
 HOMEPAGE = "https://invent.kde.org/frameworks/ki18n"
 LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL) & BSD-3-Clause"
-PR = "r0"
 
 DEPENDS:append:class-native = " \
     extra-cmake-modules-native \

@@ -7,7 +7,6 @@ DESCRIPTION = "Coroutines for Qt"
 HOMEPAGE = "https://github.com/danvratil/qcoro"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSES/MIT.txt;md5=387248cdf922178ee3fdc379e28542dc"
-PR = "r0"
 
 DEPENDS += "qtbase \
             qtdeclarative \

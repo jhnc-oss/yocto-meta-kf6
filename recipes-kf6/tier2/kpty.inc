@@ -9,7 +9,6 @@ SUMMARY = "KPty"
 DESCRIPTION = "Interfacing with pseudo terminal devices"
 HOMEPAGE = "https://invent.kde.org/frameworks/kpty"
 LICENSE = "LGPL-2.0-or-later & BSD-3-Clause"
-PR = "r0"
 
 DEPENDS += "kcoreaddons kcoreaddons-native"
 

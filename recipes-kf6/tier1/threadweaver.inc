@@ -9,7 +9,6 @@ SUMMARY = "ThreadWeaver"
 DESCRIPTION = "Helper for multithreaded programming"
 HOMEPAGE = "https://invent.kde.org/frameworks/threadweaver"
 LICENSE = "LGPL-2.0-or-later"
-PR = "r0"
 
 DEPENDS += "qtbase"
 

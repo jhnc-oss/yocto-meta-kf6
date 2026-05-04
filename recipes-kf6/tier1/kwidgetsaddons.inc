@@ -9,7 +9,6 @@ SUMMARY = "KWidgetsAddons"
 DESCRIPTION = "Large set of desktop widgets"
 HOMEPAGE = "https://invent.kde.org/frameworks/kwidgetsaddons"
 LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
-PR = "r0"
 
 DEPENDS += "qtbase"
 

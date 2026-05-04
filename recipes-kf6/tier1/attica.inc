@@ -9,7 +9,6 @@ SUMMARY = "Attica"
 DESCRIPTION = "Attica is a Qt library that implements the Open Collaboration Services API"
 HOMEPAGE = "https://invent.kde.org/frameworks/attica"
 LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
-PR = "r0"
 
 DEPENDS += "qtbase"
 

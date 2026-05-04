@@ -7,7 +7,6 @@ SUMMARY = "Integration for Frameworks"
 DESCRIPTION = "Integration of Qt application with KDE workspaces"
 HOMEPAGE = "https://invent.kde.org/frameworks/frameworkintegration"
 LICENSE = "LGPL-2.0-only"
-PR = "r0"
 
 DEPENDS += "kauth-native \
             kconfig \

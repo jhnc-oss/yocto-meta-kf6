@@ -7,7 +7,6 @@ SUMMARY = "KHolidays"
 DESCRIPTION = "Library to assist determining when holidays occur"
 HOMEPAGE = "https://invent.kde.org/frameworks/kholidays"
 LICENSE = "LGPL-2.0-or-later & BSD-2-Clause"
-PR = "r0"
 
 DEPENDS += "bison-native \
             qtbase \

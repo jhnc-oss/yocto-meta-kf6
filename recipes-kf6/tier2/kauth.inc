@@ -8,7 +8,6 @@ SUMMARY = "KAuth"
 DESCRIPTION = "Execute actions as privileged user"
 HOMEPAGE = "https://invent.kde.org/frameworks/kauth"
 LICENSE = "LGPL-2.0-or-later & LGPL-2.1-or-later & BSD-3-Clause"
-PR = "r0"
 
 DEPENDS += "kcoreaddons \
             qtbase \

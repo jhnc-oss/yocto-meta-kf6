@@ -7,7 +7,6 @@ SUMMARY = "Syndication"
 DESCRIPTION = "An RSS/Atom parser library"
 HOMEPAGE = "https://invent.kde.org/frameworks/syndication"
 LICENSE = "LGPL-2.0-or-later"
-PR = "r0"
 
 DEPENDS += "kcodecs qtbase"
 
