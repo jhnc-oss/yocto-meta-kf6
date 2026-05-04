@@ -8,10 +8,3 @@ version = 1
 path = "conf/licenses/*"
 SPDX-FileCopyrightText = "None/Various Authors of the license files"
 SPDX-License-Identifier = "LicenseRef-LicenseText"
-
-# backported recipes from Yocto Upstream
-[[annotations]]
-precedence = "aggregate"
-path = "recipes-devtools/cmake/**"
-SPDX-FileCopyrightText = "OpenEmbedded-Core Developers"
-SPDX-License-Identifier = "MIT"
