@@ -21,7 +21,7 @@ lint:oelint:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH
 
-.yocto_base:
+.yocto_base_scarthgap:
   stage: build
   image: storage.kde.org/vm-images/yocto-builder-noble
   tags:
@@ -58,7 +58,7 @@ lint:oelint:
       - bitbake.log
 
 yocto_scarthgap:
-  extends: .yocto_base
+  extends: .yocto_base_scarthgap
   rules:
     - if: '$CI_COMMIT_BRANCH != "scarthgap" && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "scarthgap"'
   script:
@@ -74,7 +74,7 @@ yocto_scarthgap:
     - bitbake packagegroup-kf6-full
 
 yocto_scarthgap_seeding:
-  extends: .yocto_base
+  extends: .yocto_base_scarthgap
   rules:
     - if: $CI_COMMIT_BRANCH == "scarthgap"
   id_tokens:
@@ -96,6 +96,58 @@ yocto_scarthgap_seeding:
     - bitbake packagegroup-kf6-full
 # upload to shared sstate storage
     - ${CI_PROJECT_DIR}/ci-utilities/sync-s3-folder.py --mode upload --local /mnt/yocto_sstate_scarthgap --remote storage.kde.org/yocto-sstate/scarthgap/ --verbose
+
+.yocto_base_wrynose:
+  stage: build
+  image: storage.kde.org/vm-images/yocto-builder-noble
+  tags:
+    - LargeVM
+    - amd64
+  before_script:
+# generic sysadmin tooling
+    - pip3 install --break-system-packages minio
+    - git clone https://invent.kde.org/sysadmin/ci-utilities.git
+# prepare bitbake
+    - git clone --depth 1 --branch yocto-6.0_M3 https://github.com/openembedded/bitbake.git
+    - |
+    - |
+        ./bitbake/bin/bitbake-setup init \
+            --non-interactive \
+            --source-overrides scripts/ci/gitlab-source-override.json \
+            scripts/ci/kde-master.conf.json \
+            kde \
+            distro/poky machine/beaglev-ahead
+  after_script:
+    - cp -L ./bitbake-builds/poky-master/tmp/log/cooker/beaglev-ahead/console-latest.log bitbake.log
+  artifacts:
+    expire_in: 3 days
+    when: always
+    paths:
+      - ./bitbake-builds/poky-master/build/tmp/buildstats/
+      - bitbake.log
+
+yocto_wrynose:
+  extends: .yocto_base_wrynose
+  rules:
+    - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"'
+  script:
+    - source bitbake-builds/poky-master/build/init-build-env
+    - bitbake-config-build enable-fragment kf6/autobuilder kf6/sstate_wrynose
+    - bitbake packagegroup-kf6-full
+
+yocto_wrynose_seeding:
+  extends: .yocto_base_wrynose
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+  id_tokens:
+    MINIO_OIDC:
+      aud: https://tokens.kde.org
+  script:
+    - source bitbake-builds/poky-master/build/init-build-env
+    - bitbake-config-build enable-fragment kf6/autobuilder kf6/sstate_wrynose_seeding
+    - bitbake packagegroup-kf6-full
+# upload to shared sstate storage
+    - ${CI_PROJECT_DIR}/ci-utilities/sync-s3-folder.py --mode upload --local /mnt/yocto_sstate_wrynose --remote storage.kde.org/yocto-sstate/wrynose/ --verbose
 
 qa_testing:
   stage: test

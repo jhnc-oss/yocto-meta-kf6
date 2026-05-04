@@ -1,0 +1,11 @@
+{
+    "description": "Override meta-kf6 with CI checkout",
+    "sources": {
+        "meta-kf6": {
+            "local": {
+                "path": "../../"
+            }
+        }
+    },
+    "version": "1.0"
+}
