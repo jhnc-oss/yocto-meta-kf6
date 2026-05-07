@@ -30,7 +30,7 @@
             "git-remote": {
                 "uri": "https://github.com/openembedded/meta-openembedded.git",
                 "branch": "wrynose",
-                "rev": "420222862f5a6d95023b8f5f3b7e1808b2264ef9"
+                "rev": "05191ba25b6dcf15a28dac2231bd0d2f9ab514da"
             }
         },
         "meta-riscv": {
