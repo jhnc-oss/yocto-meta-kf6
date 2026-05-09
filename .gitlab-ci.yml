@@ -108,6 +108,7 @@ yocto_scarthgap_seeding:
     - pip3 install --break-system-packages minio
     - git clone https://invent.kde.org/sysadmin/ci-utilities.git
 # prepare bitbake
+    - [ -d /mnt/yocto_sstate_wrynose ] || mkdir -p /mnt/yocto_sstate_wrynose
     - git clone --depth 1 --branch yocto-6.0_M3 https://github.com/openembedded/bitbake.git
     - |
     - |
