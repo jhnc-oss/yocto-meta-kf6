@@ -64,10 +64,8 @@ FILES:${PN}:append = " \
     ${libdir}/qml/org/kde/* \
 "
 
-# TODO "${datadir}/kdevappwizard/templates/*.tar.bz2" is deprecated, remove when all frameworks are ported away
 FILES:${PN}-dev:append = " \
     ${datadir}/dbus-1/interfaces/*.xml \
-    ${datadir}/kdevappwizard/templates/*.tar.bz2 \
     ${datadir}/kdevfiletemplates/templates/*.tar.bz2 \
     ${datadir}/qlogging-categories6 \
     ${libdir}/plugins/designer/*.so \
