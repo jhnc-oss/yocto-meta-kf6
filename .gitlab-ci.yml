@@ -110,7 +110,7 @@ yocto_scarthgap_seeding:
 # prepare bitbake
     - |
         [ -d /mnt/yocto_sstate_wrynose ] || mkdir -p /mnt/yocto_sstate_wrynose
-    - git clone --depth 1 --branch yocto-6.0_M3 https://github.com/openembedded/bitbake.git
+    - git clone --depth 1 --branch yocto-6.0 https://github.com/openembedded/bitbake.git
     - |
     - |
         ./bitbake/bin/bitbake-setup init \
