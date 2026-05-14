@@ -5,14 +5,14 @@
             "git-remote": {
                 "uri": "https://github.com/openembedded/bitbake.git",
                 "branch": "master",
-                "rev": "yocto-6.0_M3"
+                "rev": "yocto-6.0"
             }
         },
         "openembedded-core": {
             "git-remote": {
                 "uri": "https://github.com/openembedded/openembedded-core.git",
-                "branch": "master",
-                "rev": "yocto-6.0_M3"
+                "branch": "wrynose",
+                "rev": "yocto-6.0"
             }
         },
         "meta-yocto": {
@@ -23,7 +23,7 @@
                     }
                 },
                 "branch": "master",
-                "rev": "master"
+                "rev": "yocto-6.0"
             }
         },
         "meta-openembedded": {
@@ -59,17 +59,17 @@
         "configurations": [
         {
             "bb-layers": [
-                "openembedded-core/meta",
-                "meta-yocto/meta-yocto-bsp",
-                "meta-yocto/meta-poky",
-                "meta-riscv",
-                "meta-openembedded/meta-oe",
+                "meta-kf6",
                 "meta-openembedded/meta-multimedia",
                 "meta-openembedded/meta-networking",
+                "meta-openembedded/meta-oe",
                 "meta-openembedded/meta-perl",
                 "meta-openembedded/meta-python",
                 "meta-qt6",
-                "meta-kf6"
+                "meta-riscv",
+                "meta-yocto/meta-poky",
+                "meta-yocto/meta-yocto-bsp",
+                "openembedded-core/meta"
             ],
             "setup-dir-name": "$distro-master",
             "oe-fragments-one-of": {
