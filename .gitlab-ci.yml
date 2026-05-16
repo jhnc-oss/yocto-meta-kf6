@@ -148,6 +148,8 @@ yocto_wrynose_seeding:
     - source bitbake-builds/poky-master/build/init-build-env
     - bitbake-config-build enable-fragment kf6/autobuilder kf6/sstate_wrynose_seeding
     - bitbake packagegroup-kf6-full
+# cleanup local sstate cache before upload
+    - ${CI_PROJECT_DIR}/bitbake-builds/poky-master/layers/openembedded-core/scripts/sstate-cache-management.py --remove-duplicated --cache-dir ${CI_PROJECT_DIR}/bitbake-builds/.sstate-cache/ --verbose --yes
 # upload to shared sstate storage
     - ${CI_PROJECT_DIR}/ci-utilities/sync-s3-folder.py --mode upload --local /mnt/yocto_sstate_wrynose --remote storage.kde.org/yocto-sstate/wrynose/ --verbose
 
