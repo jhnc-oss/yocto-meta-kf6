@@ -21,8 +21,9 @@ SRC_URI = "git://github.com/danvratil/qcoro.git;nobranch=1;protocol=https;destsu
 
 inherit qt6-cmake
 
-EXTRA_OECMAKE += "-DQCORO_WITH_QTWEBSOCKETS=OFF \
-                  -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
-"
+EXTRA_OECMAKE += "-DQCORO_WITH_QTWEBSOCKETS=OFF"
+EXTRA_OECMAKE += "-DBUILD_SHARED_LIBS=ON"
+EXTRA_OECMAKE += "-DQML_INSTALL_DIR=${@os.path.relpath(d.getVar('QT6_INSTALL_QMLDIR'), d.getVar('prefix') + '/')}"
 
 FILES:${PN}-dev += "${prefix}/mkspecs"
+FILES:${PN} += "${libdir}/qml"
