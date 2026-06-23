@@ -34,10 +34,18 @@ EXTRA_OECMAKE:class-target = "-DMEINPROC6_EXECUTABLE=${STAGING_DIR_NATIVE}/${bin
                               -DRELOCATABLE_DOCBOOK_FILES=ON \
 "
 
-do_compile:append() {
-    # TODO this reworks the all-l18n.xml paths to be host-independent
-    # a better solution is to change this directly in docbookl18nhelper.cpp
-    sed -i 's:${RECIPE_SYSROOT}::g' ${B}/src/customization/xsl/all-l10n.xml
+# TODO: this reworks the all-l18n.xml paths to be host-independent a
+# better solution is to change this directly in docbookl18nhelper.cpp.
+do_compile:append:class-target() {
+    sed -i \
+          's:${RECIPE_SYSROOT}/usr/share/xml/docbook/xsl-stylesheets:../../../../xml/docbook/xsl-stylesheets:g' \
+          ${B}/src/customization/xsl/all-l10n.xml
+}
+
+do_compile:append:class-native() {
+    sed -i \
+          's:${RECIPE_SYSROOT_NATIVE}/usr/share/xml/docbook/xsl-stylesheets:../../../../xml/docbook/xsl-stylesheets:g' \
+          ${B}/src/customization/xsl/all-l10n.xml
 }
 
 FILES:${PN} += "${datadir}/kf6/kdoctools/customization/* \
