@@ -16,7 +16,6 @@ DEPENDS += "kauth-native \
             kcoreaddons-native \
             kio \
             libxml2-native \
-            phonon \
             qtbase \
 "
 
